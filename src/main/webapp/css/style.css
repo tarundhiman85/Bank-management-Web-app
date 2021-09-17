@@ -1,0 +1,130 @@
+.navbar{
+    margin-top: 20px;
+    background-color: #001e30;
+    font-family: Verdana;
+    color: #72d3f1;
+}
+.navbar-dark{
+    background-color: #2F4F4F;
+}
+.nav-link{
+    color: #72d3f1 !important;
+}
+.card1 {
+    margin-top: 50px;
+    margin-left: 30%;
+    background-color: rgba(37,150,190,0.1);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    max-width: 500px;
+    text-align: center;
+    color: #72d3f1;
+    font-weight: 400;
+}
+input[type="text"]
+{
+    background: rgba(0, 0, 0, 0);
+    color: #FFF;
+    border: none;
+    outline: none;
+}
+.card2 {
+    margin-top: 50px;
+    margin-left: 30%;
+    background-color: rgba(37,150,190,0.1);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    max-width: 500px;
+    justify-content: center;
+    color: #72d3f1;
+}
+.div-block{
+    margin-top: 250px;
+    background-color: rgba(0, 30, 48, 0.63);
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-size: 25px;
+    font-weight: 500;
+    text-align: center;
+    color: #72d3f1;
+    letter-spacing: 1px;
+}
+.navbar-collapse{
+    font-size: 20px;
+}
+#f1{
+    margin-top: 13%;
+    padding-left: 30%;
+}
+.btn1{
+  background-color: rgba(37,150,190,0);
+    border: solid 1px #72d3f1;
+}
+.btn2{
+    margin-top: 10px;
+    background-color: rgba(37,150,190,0);
+    border: solid 1px #72d3f1;
+}
+.nav-link{
+    color: azure;
+}
+#right{
+    font-size: 20px;
+}
+div#boxs {
+    padding: 100px;
+    color: #72d3f1;
+}
+#b1{
+    background-color: rgba(0, 31, 50, 0.01);
+    border: #72d3f1 1px solid;
+}
+.card{
+    background-color: rgba(0, 31, 50, 0.5);
+    color: #72d3f1;
+}
+.modal-content{
+    background-color: rgba(0, 31, 50, 0.01);
+}
+.form-control{
+    background-color: rgba(114, 211, 241, 0);
+    border:1px solid #72d3f1;
+}
+.card-body{
+    display: block;
+    float: none;
+    border-style: solid;
+    border-width: 2px;
+    border-radius: 20px;
+    border-color: #72d3f1;
+}
+.back{
+    background: url("../img/back-night.jpg") no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+.log_cursor:hover{
+    cursor: hand;
+    pointer-events: auto;
+}
+.navbar-default {
+    background: none;
+    color: #72d3f1;
+}
+.navbar-brand{
+    color: #72d3f1;
+}
+#deposit{
+    background-color: rgba(37,150,190,0);
+    border: solid 1px #72d3f1;
+    color: #72d3f1;
+    margin-top: 3%;
+    margin-left: 15%;
+    font-weight: bold;
+}
+#deposit1{
+    background-color: rgba(37,150,190,0);
+    border: solid 1px #72d3f1;
+    color: #72d3f1;
+    font-weight: bold;
+}
