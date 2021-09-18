@@ -13,13 +13,16 @@
                 <div class="card-body px-5">
                     <h4 class="text-center my-3">Sign Up Here</h4>
                     <form action="RegisterServlet" method="post">
-                        <div class="form-group">
-                            <label for="name">User Name</label>
-                            <input name="user_name" type="text" required class="form-control" id="name" placeholder="Enter your name here" aria-describedby="emailHelp" >
-                        </div>
+
                         <div class="form-group">
                             <label for="email">User Email</label>
                             <input name="user_email" required type="email" class="form-control" id="email" placeholder="Enter your email here" aria-describedby="emailHelp" >
+                        </div>
+                        <div class="form-group">
+                            <label for="name">User Name</label>
+                            <%--                            <input name="user_name" required type="text"  class="form-control" id="name" placeholder="Enter your name here" aria-describedby="emailHelp" >--%>
+                            <input name="user_name" style="border:1px solid #72d3f1;" required type="text" class="form-control" id="name" placeholder="Enter your name here" aria-describedby="emailHelp" >
+
                         </div>
                         <div class="form-group">
                             <label for="password" >User Password</label>
@@ -45,6 +48,7 @@
                         <a href="login.jsp" class="text-center d-block mb-2">If Already a User Click Here</a>
                         <div class="container text-center">
                             <button id="deposit1">Register</button>
+                            <button type="reset" id="reset">Reset</button>
                         </div>
                     </form>
                 </div>

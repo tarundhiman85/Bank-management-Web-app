@@ -8,8 +8,8 @@
 <body class="back">
 <%@include file="navbar.jsp"%>
 <div class="container-fluid">
-    <div class="row">
-        <div class="col-md-6 offset-md-3">
+    <div class="row al">
+        <div class="col-md-4">
 <div class="card mt-3">
     <div class="card-header custom-bg">
         <h3>Login Here</h3>
@@ -26,10 +26,12 @@
                 <label for="exampleInputPassword1">Password</label>
                 <input name="password" type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
             </div>
-            <a href="register.jsp" class="text-center d-block mb-2">If Not Registered Click Here</a>
+            <div style="margin-bottom: 15px">
+                <a href="register.jsp"  class="text-center d-block mb-2">If Not Registered Click Here</a>
+            </div>
             <div class="container text-center">
-                <button type="submit" class="btn btn-primary custom-bg border-0">Submit</button>
-                <button type="reset" class="btn btn-primary custom-bg border-0">Reset</button>
+                <button type="submit" id="register">Submit</button>
+                <button type="reset" id="reset">Reset</button>
             </div>
         </form>
     </div>

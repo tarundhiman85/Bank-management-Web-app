@@ -95,6 +95,7 @@ div#boxs {
     border-width: 2px;
     border-radius: 20px;
     border-color: #72d3f1;
+    background-color: rgba(0, 31, 50, 0.35);
 }
 .back{
     background: url("../img/back-night.jpg") no-repeat center center fixed;
@@ -127,4 +128,24 @@ div#boxs {
     border: solid 1px #72d3f1;
     color: #72d3f1;
     font-weight: bold;
+}
+#register{
+    background-color: rgba(37,150,190,0);
+    border: solid 1px #72d3f1;
+    color: #72d3f1;
+    font-weight: bold;
+    margin-right: 20px;
+}
+#reset{
+    background-color: rgba(37,150,190,0);
+    border: solid 1px #72d3f1;
+    color: #72d3f1;
+    font-weight: bold;
+}
+.card-body{
+    max-width: 700px;
+}
+.al{
+    justify-content: center;
+    margin-top: 30px;
 }
