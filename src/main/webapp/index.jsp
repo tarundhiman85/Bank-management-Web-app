@@ -25,8 +25,8 @@ To do so, the user has to create a unique user name and password for securely lo
 
 <div class="div-block">
     <div class="text-block">
-        Welcome to the ABC Bank<br>
-        Check your Account Details Akshay Sontakke <br>
+        Welcome to the ABC Bank  Akshay <br>
+        Check your Account Details <br>
         Check Your Loan Offers<br>
         Withdraw Money<br>
     </div>
