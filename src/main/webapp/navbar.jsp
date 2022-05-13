@@ -35,6 +35,14 @@
             </li>
         </ul>
     </div>
+
+    <div class="collapse navbar-collapse">
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a class="nav-link" href="CreateAccount.jsp">Create Account</a>
+            </li>
+        </ul>
+    </div>
     <%
         if(user1==null){
     %>
