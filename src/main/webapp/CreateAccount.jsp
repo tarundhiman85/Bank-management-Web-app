@@ -19,7 +19,7 @@
             <div class="card">
                 <div class="card-body px-5">
                     <h4 class="text-center my-3">Create Account</h4>
-                    <form action="RegisterServlet" method="post">
+                    <form action="CreateAccount" method="post">
 
                         <div class="form-group">
                             <label>User Name</label>
