@@ -48,24 +48,24 @@
 
                         <div class="form-group">
                             <label for="address">Permanent Address</label>
-                            <textarea name="user_address" required style="height: 150px" class="form-control" id="address" placeholder="Enter your Address">
+                            <textarea name="user_address" placeholder="Enter your Permanent Address" required style="height: 150px" class="form-control" id="address">
                            </textarea>
                         </div>
 
                         <div class="form-group">
                             <label for="address">Present Address</label>
-                            <textarea name="present_address" required style="height: 150px" class="form-control" id="presentaddress" placeholder="Enter your Address">
+                            <textarea name="present_address" placeholder="Enter your Present Address" required style="height: 150px" class="form-control" id="presentaddress" >
                            </textarea>
                         </div>
 
                         <div class="form-group">
                             <label for="panno" >PAN Number</label>
-                            <input name="pan_number" required type="number" class="form-control" id="panno" placeholder="Enter your phone" aria-describedby="emailHelp" >
+                            <input name="pan_number" style="border:1px solid #72d3f1;" required type="number" class="form-control" id="panno" placeholder="Pan Number" aria-describedby="emailHelp" >
                         </div>
 
                         <div class="form-group">
                             <label for="phone" >User Phone</label>
-                            <input name="user_phone" required type="number" class="form-control" id="phone" placeholder="Enter your phone" aria-describedby="emailHelp" >
+                            <input name="user_phone" style="border:1px solid #72d3f1;" required type="number" class="form-control" id="phone" placeholder="Enter your phone" aria-describedby="emailHelp" >
                         </div>
 
                         <div class="form-group">
@@ -78,7 +78,7 @@
 
                         <div class="form-group">
                             <label>Opening Balance</label>
-                            <input name="opening_balance" class="form-control" required type="number" min="5000" id="balance">
+                            <input name="opening_balance" style="border:1px solid #72d3f1;" class="form-control" required type="number" min="5000" id="balance" placeholder="Minimum 5000 ">
                         </div>
                         <a href="login.jsp" class="text-center d-block mb-2">If Already have an Click Here</a>
                         <div class="container text-center">
