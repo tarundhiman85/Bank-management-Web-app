@@ -22,14 +22,14 @@
                     <form action="CreateAccount" method="post">
 
                         <div class="form-group">
-                            <label>User Name</label>
-                            <input name="first_name" style="border:1px solid #72d3f1;" required type="text" class="form-control" id="firstname" placeholder="Enter your first name here" aria-describedby="emailHelp" ><br>
-                            <input name="last_name" style="border:1px solid #72d3f1;" required type="text" class="form-control" id="lastname" placeholder="Enter your last name here" aria-describedby="emailHelp" >
+                            <label for="firstname">User Name</label>
+                            <input name="first_name" required type="text" style="border:1px solid #72d3f1;" class="form-control" id="firstname" placeholder="Enter your name here" aria-describedby="emailHelp"><br>
+                            <input name="last_name" required type="text" style="border:1px solid #72d3f1;" required type="text" class="form-control" id="lastname" placeholder="Enter your last name here">
                         </div>
 
                         <div class="form-group">
-                            <label>Fathers Name</label>
-                            <input name="fathers_name" style="border:1px solid #72d3f1;" required type="text" class="form-control" id="fathername" placeholder="Enter your name here" aria-describedby="emailHelp" >
+                            <label for="fathername">Fathers Name</label>
+                            <input name="fathers_name" required type="text" style="border:1px solid #72d3f1;" class="form-control" id="fathername" placeholder="Enter your name here" aria-describedby="emailHelp" >
                         </div>
 
                         <div class="form-group">
@@ -37,7 +37,7 @@
                             <input name="dob" required type="date" class="form-control" id="dob" placeholder="Enter your name here" aria-describedby="emailHelp">
                         </div>
 
-                        <div class="form-grouo">
+                        <div class="form-group">
                             <label for="gender">Gender</label>
                             <select name="gender" id="gender" required class="form-control">
                                 <option value="Male">Male</option>
@@ -48,29 +48,29 @@
 
                         <div class="form-group">
                             <label for="address">Permanent Address</label>
-                            <textarea name="user_address" placeholder="Enter your Permanent Address" required style="height: 150px" class="form-control" id="address">
+                            <textarea name="user_address" placeholder="Enter your Permanent Address" class="form-control" id="address">
                            </textarea>
                         </div>
 
                         <div class="form-group">
                             <label for="address">Present Address</label>
-                            <textarea name="present_address" placeholder="Enter your Present Address" required style="height: 150px" class="form-control" id="presentaddress" >
+                            <textarea name="present_address" placeholder="Enter your Present Address"  class="form-control" id="presentaddress" >
                            </textarea>
                         </div>
 
                         <div class="form-group">
                             <label for="panno" >PAN Number</label>
-                            <input name="pan_number" style="border:1px solid #72d3f1;" required type="number" class="form-control" id="panno" placeholder="Pan Number" aria-describedby="emailHelp" >
+                            <input name="pan_number" required type="number" class="form-control" id="panno" placeholder="Pan Number" aria-describedby="emailHelp" >
                         </div>
 
                         <div class="form-group">
                             <label for="phone" >User Phone</label>
-                            <input name="user_phone" style="border:1px solid #72d3f1;" required type="number" class="form-control" id="phone" placeholder="Enter your phone" aria-describedby="emailHelp" >
+                            <input name="user_phone" required type="number" class="form-control" id="phone" placeholder="Enter your phone" aria-describedby="emailHelp" >
                         </div>
 
                         <div class="form-group">
-                            Type of Account &nbsp
-                            <select name="account_type" class="btn1" required>
+                            <label>Type of Account &nbsp</label>
+                            <select name="account_type" id="account_type" required class="form-control">
                                 <option value="saving">Saving</option>
                                 <option value="current">Current</option>
                             </select>
@@ -78,11 +78,12 @@
 
                         <div class="form-group">
                             <label>Opening Balance</label>
-                            <input name="opening_balance" style="border:1px solid #72d3f1;" class="form-control" required type="number" min="5000" id="balance" placeholder="Minimum 5000 ">
+                            <input name="opening_balance" class="form-control" required type="number" min="5000" id="balance" placeholder="Enter Amount">
+                            <small id="emailHelp" style="color:white" class="form-text">Minimum opening amount should be 5000.</small>
                         </div>
                         <a href="login.jsp" class="text-center d-block mb-2">If Already have an Click Here</a>
                         <div class="container text-center">
-                            <button id="deposit1">Register</button>
+                            <button id="register">Register</button>
                             <button type="reset" id="reset">Reset</button>
                         </div>
                     </form>
