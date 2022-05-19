@@ -22,8 +22,8 @@
 }
 input[type="text"]
 {
-    background: rgba(0, 0, 0, 0);
-    color: #FFF;
+    background: transparent;
+    /*background: rgba(0, 0, 0, 0);*/
     border: none;
     outline: none;
 }
@@ -87,6 +87,7 @@ div#boxs {
 .form-control{
     background-color: rgba(114, 211, 241, 0);
     border:1px solid #72d3f1;
+    color: white;
 }
 .card-body{
     display: block;
@@ -95,7 +96,7 @@ div#boxs {
     border-width: 2px;
     border-radius: 20px;
     border-color: #72d3f1;
-    background-color: rgba(0, 31, 50, 0.35);
+    background-color: rgba(0, 31, 50, 1);
 }
 .back{
     background: url("../img/back-night.jpg") no-repeat center center fixed;
@@ -136,11 +137,26 @@ div#boxs {
     font-weight: bold;
     margin-right: 20px;
 }
+#register:hover{
+    background-color: #72d3f1;
+    border: solid 1px #72d3f1;
+    color: #001F32FF;
+    font-weight: bold;
+    margin-right: 20px;
+    transition: 0.3s;
+}
 #reset{
     background-color: rgba(37,150,190,0);
     border: solid 1px #72d3f1;
     color: #72d3f1;
     font-weight: bold;
+}
+#reset:hover{
+    background-color: #72d3f1;
+    border: solid 1px #72d3f1;
+    color: #001F32FF;
+    font-weight: bold;
+    transition: 0.3s;
 }
 .card-body{
     max-width: 700px;
