@@ -10,6 +10,8 @@
 <head>
     <title>Register</title>
     <%@include file="/common_css_js.jsp"%>
+    <%@include file="js/script.js"  %>
+    <script src="js/script.js"></script>
 </head>
 <body class="back">
 <%@include file="navbar.jsp"%>
@@ -53,8 +55,12 @@
                         </div>
 
                         <div class="form-group">
-                            <label for="address">Present Address</label>
-                            <textarea name="present_address" placeholder="Enter your Present Address"  class="form-control" id="presentaddress" >
+                            <input name="yes" required type="checkbox" class="form-control" id="yes" onclick="setPresentAddress();"><label >Same as above</label>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Present Address</label>
+                            <textarea name="present_address" placeholder="Enter your Present Address"  class="form-control" id="present address">
                            </textarea>
                         </div>
 
