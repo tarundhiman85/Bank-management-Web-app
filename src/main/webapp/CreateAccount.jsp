@@ -24,8 +24,16 @@
                     <form action="CreateAccount" method="post">
 
                         <div>
-
+                            <label>Email</label>
+                            <input name="email" required type="email" class="form-control" id="email" placeholder="Enter Email Address" aria-describedby="emailHelp"><br>
                         </div>
+
+                        <div>
+                            <label>Password</label>
+                            <input name="password" required type="password" class="form-control" id="password" placeholder="Enter Password"><br>
+                            <input name="confirm password" required type="password" class="form-control" id="confirm password" placeholder="Confirm Password"><br>
+                        </div>
+
                         <div class="form-group">
                             <label for="firstname">User Name</label>
                             <input name="first_name" required type="text" style="border:1px solid #72d3f1;" class="form-control" id="firstname" placeholder="Enter your name here" aria-describedby="emailHelp"><br>
@@ -58,7 +66,7 @@
                         </div>
 
                         <div class="form-group">
-                            <input name="yes" required type="checkbox" class="form-control" id="yes" onclick="setPresentAddress();"><label >Same as above</label>
+                            <input name="yes" required type="checkbox" id="yes" onclick="setPresentAddress();"><label>Same as above</label>
                         </div>
 
                         <div class="form-group">
@@ -92,7 +100,7 @@
                         </div>
                         <a href="login.jsp" class="text-center d-block mb-2">If Already have an Click Here</a>
                         <div class="container text-center">
-                            <button id="register">Register</button>
+                            <button id="register" onclick="verifyPassword();">Register</button>
                             <button type="reset" id="reset">Reset</button>
                         </div>
                     </form>
