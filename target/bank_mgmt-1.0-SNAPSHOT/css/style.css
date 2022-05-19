@@ -22,8 +22,8 @@
 }
 input[type="text"]
 {
-    background: rgba(0, 0, 0, 0);
-    color: #FFF;
+    background: transparent;
+    /*background: rgba(0, 0, 0, 0);*/
     border: none;
     outline: none;
 }
@@ -87,6 +87,7 @@ div#boxs {
 .form-control{
     background-color: rgba(114, 211, 241, 0);
     border:1px solid #72d3f1;
+    color: white;
 }
 .card-body{
     display: block;
@@ -95,6 +96,7 @@ div#boxs {
     border-width: 2px;
     border-radius: 20px;
     border-color: #72d3f1;
+    background-color: rgba(0, 31, 50, 1);
 }
 .back{
     background: url("../img/back-night.jpg") no-repeat center center fixed;
@@ -127,4 +129,170 @@ div#boxs {
     border: solid 1px #72d3f1;
     color: #72d3f1;
     font-weight: bold;
+}
+#register{
+    background-color: rgba(37,150,190,0);
+    border: solid 1px #72d3f1;
+    color: #72d3f1;
+    font-weight: bold;
+    margin-right: 20px;
+}
+#register:hover{
+    background-color: #72d3f1;
+    border: solid 1px #72d3f1;
+    color: #001F32FF;
+    font-weight: bold;
+    margin-right: 20px;
+    transition: 0.3s;
+}
+#reset{
+    background-color: rgba(37,150,190,0);
+    border: solid 1px #72d3f1;
+    color: #72d3f1;
+    font-weight: bold;
+}
+#reset:hover{
+    background-color: #72d3f1;
+    border: solid 1px #72d3f1;
+    color: #001F32FF;
+    font-weight: bold;
+    transition: 0.3s;
+}
+.card-body{
+    max-width: 700px;
+}
+.al{
+    justify-content: center;
+    margin-top: 30px;
+}
+/* below code for customer Portal */
+h2 {
+    color: #72d3f1;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 35px;
+    padding-top: 35px;
+    text-align: center;
+    margin-right: 100px;
+}
+a:hover {
+    text-decoration: none;
+}
+.C {
+    margin-top: 180px;
+    margin-right: 240px;
+}
+
+
+/*body {*/
+/*    background-image: url('bank_image.png');*/
+/*    background-size: cover;*/
+/*}*/
+
+.ak1 {
+    width: 230px;
+    height: 150px;
+    margin-top: -145px;
+    background-color: white;
+    border: solid 6px #72d3f1;
+    border-radius: 10px;
+
+
+}
+
+.ak2 {
+    width: 230px;
+    height: 150px;
+    margin-top: -145px;
+    background-color: white;
+    border: solid 6px #72d3f1;
+    border-radius: 10px;
+
+
+}
+
+.ak3 {
+    width: 230px;
+    height: 150px;
+    margin-top: -67px;
+    background-color: white;
+    border: solid 6px #72d3f1;
+    border-radius: 10px;
+}
+
+.ak4 {
+    width: 230px;
+    height: 150px;
+    margin-top: -67px;
+    background-color: white;
+    border: solid 6px #72d3f1;
+    border-radius: 10px;
+}
+
+.ak5 {
+    width: 230px;
+    height: 150px;
+    margin-top: -28px;
+    align-items: center;
+    background-color: white;
+    border: solid 6px #72d3f1;
+    border-radius: 10px;
+}
+
+.ak6 {
+    width: 230px;
+    height: 150px;
+    margin-top: -28px;
+    text-align: center;
+    background-color: white;
+    border: solid 6px #72d3f1;
+    border-radius: 10px;
+}
+
+.K {
+    margin-top: 45px;
+    margin-left: 83px;
+    color: rgb(255, 166, 0);
+}
+
+
+
+.k5 {
+    margin-left: 65px;
+    margin-top: 30px;
+    color: rgb(255, 166, 0);
+}
+
+.k6 {
+    margin-left: 5px;
+    margin-top: 30px;
+    color: rgb(255, 166, 0);
+}
+
+
+
+
+.ak1:hover {
+    background-color: #001F32FF;
+    text-decoration: none;
+
+}
+
+.ak2:hover {
+    background-color: #001F32FF;
+}
+
+.ak3:hover {
+    background-color: #001F32FF;
+}
+
+.ak4:hover {
+    background-color: #001F32FF;
+}
+
+.ak5:hover {
+    background-color: #001F32FF;
+}
+
+.ak6:hover {
+    background-color: #001F32FF;
 }
