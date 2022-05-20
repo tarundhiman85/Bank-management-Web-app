@@ -10,7 +10,6 @@
 <head>
     <title>Register</title>
     <%@include file="/common_css_js.jsp"%>
-    <%@include file="js/script.js"  %>
     <script src="js/script.js"></script>
 </head>
 <body class="back">
