@@ -44,7 +44,7 @@ public class Users {
     private String branchName;
     @Column(length = 10, name = "ifsc_code")
     private String ifscCode;
-
+    private int RoleId;
     public Users(){}
 
     public Users(String userName, String userEmail, String userPassword, String userPhone, String userAddress, String presentAddress, String accountType, String fatherName, String dob, String panNumber, String balance, String landline, String gender, String branchName) {
@@ -73,6 +73,7 @@ public class Users {
         this.customerId = String.valueOf(Math.random()).substring(2, 12);
         this.accountNo = String.valueOf(Math.random()).substring(2,12);
         this.cardNumber = String.valueOf(Math.random()).substring(2,12);
+        this.RoleId=2;
         switch (this.branchName) {
             case "Ahmadabad":
                 this.ifscCode = "IFSC-AHM";
@@ -95,6 +96,13 @@ public class Users {
         }
     }
 
+    public int getRoleId() {
+        return RoleId;
+    }
+
+    public void setRoleId(int roleId) {
+        RoleId = roleId;
+    }
 
     public int getUserId() {
         return userId;
@@ -114,6 +122,22 @@ public class Users {
 
     public String getUserEmail() {
         return userEmail;
+    }
+
+    public String getBranchName() {
+        return branchName;
+    }
+
+    public void setBranchName(String branchName) {
+        this.branchName = branchName;
+    }
+
+    public String getIfscCode() {
+        return ifscCode;
+    }
+
+    public void setIfscCode(String ifscCode) {
+        this.ifscCode = ifscCode;
     }
 
     public void setUserEmail(String userEmail) {

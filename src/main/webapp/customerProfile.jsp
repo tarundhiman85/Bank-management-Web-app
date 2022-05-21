@@ -61,7 +61,7 @@
         <div class="w-100"></div>
 
         <div class="col-6 col-sm-3">
-            <a href="#">
+            <a href="FundTransfer.jsp">
                 <div class="boxDiv">
                     <i class="fa-solid fa-money-bill-transfer k5 " style="font-size:42px"></i><br>
                     <label>Fund Transfer</label><br>
