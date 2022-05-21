@@ -10,8 +10,6 @@
 <head>
     <title>Register</title>
     <%@include file="/common_css_js.jsp"%>
-    <%--    <%@include file="js/script.js"  %>--%>
-    <%--    <script src="js/script.js"></script>--%>
 </head>
 <body class="back">
 <%@include file="navbar.jsp"%>
@@ -101,12 +99,12 @@
                         <div class="form-group">
                             <label>Select Branch</label>
                             <label for="branch"></label><select name="branch" id="branch" required class="form-control">
-                            <option value="ahmadabad">Ahmadabad</option>
-                            <option value="bangalore">Bangalore</option>
-                            <option value="chandigarh">Chandigarh</option>
-                            <option value="Haryana">haryana</option>
-                            <option value="pune">Pune</option>
-                            <option value="mumbai">Mumbai</option>
+                            <option value="Ahmadabad">Ahmadabad</option>
+                            <option value="Bangalore">Bangalore</option>
+                            <option value="Chandigarh">Chandigarh</option>
+                            <option value="Haryana">Haryana</option>
+                            <option value="Pune">Pune</option>
+                            <option value="Mumbai">Mumbai</option>
                         </select>
                         </div>
 

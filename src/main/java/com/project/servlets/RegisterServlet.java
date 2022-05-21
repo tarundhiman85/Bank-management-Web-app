@@ -32,6 +32,7 @@ public class RegisterServlet extends HttpServlet {
                 String presentAddress=request.getParameter("present_address");
                 String accountType=request.getParameter("account_type");
                 String landline = request.getParameter("LNumber");
+                String branchName = request.getParameter("branch");
                 //get father name
                 String fatherName=request.getParameter("fathers_name");
                 //get pan number
@@ -49,11 +50,15 @@ public class RegisterServlet extends HttpServlet {
                     httpSession.setAttribute("message", clickedSubmit);
                     response.sendRedirect("CreateAccount.jsp");
                 }
+                if(Integer.parseInt(balance)<5000){
+                    httpSession.setAttribute("message", "Opening Balance should be greater than 5000");
+                    response.sendRedirect("CreateAccount.jsp");
+                }
                 else{
                     //creating a constructor based on the parameters receive
                     Users user=null;
-                    if(presentAddress!=null) { user=new Users(userName,userEmail,userPassword,userPhone,userAddress,presentAddress,accountType,fatherName,dob,panNumber,balance,landline,gender);}
-                    else {user=new Users(userName,userEmail,userPassword,userPhone,userAddress,userAddress,accountType,fatherName,dob,panNumber,balance,landline,gender);}
+                    if(presentAddress!=null) { user=new Users(userName,userEmail,userPassword,userPhone,userAddress,presentAddress,accountType,fatherName,dob,panNumber,balance,landline,gender,branchName);}
+                    else {user=new Users(userName,userEmail,userPassword,userPhone,userAddress,userAddress,accountType,fatherName,dob,panNumber,balance,landline,gender,branchName);}
                     Session session = FactoryProvider.getFactory().openSession();
                     Transaction transaction = session.beginTransaction();
                     transaction.commit();

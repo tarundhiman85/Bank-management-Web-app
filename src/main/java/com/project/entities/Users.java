@@ -8,7 +8,6 @@ public class Users {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(length = 10, name = "user_id")
     private int userId;
-
     @Column(length = 100, name = "user_email")
     private String userEmail;
     @Column(length = 100, name = "user_password")
@@ -41,61 +40,61 @@ public class Users {
     private String accountNo;
     @Column(length = 10, name = "card_number")
     private String cardNumber;
+    @Column(length = 100, name = "branch_name")
+    private String branchName;
+    @Column(length = 10, name = "ifsc_code")
+    private String ifscCode;
 
     public Users(){}
 
-    public Users(String userName, String userEmail, String userPassword, String userPhone, String userAddress, String presentAddress, String accountType, String fatherName, String panNumber, String balance) {
-        this.userName = userName;
-        this.userEmail = userEmail;
-        this.userPassword = userPassword;
-        this.userAddress = userAddress;
-        this.presentAddress = presentAddress;
-        this.accountType = accountType;
-        this.fatherName = fatherName;
-        this.panNo = panNumber;
-        this.balance = balance;
-    }
-    public Users(String userName, String userEmail, String userPassword, String userPhone, String userAddress, String presentAddress, String accountType, String fatherName,String dob, String panNumber, String balance, String landline, String gender) {
-        this.userName = userName;
-        this.gender=gender;
-        this.userEmail = userEmail;
-        this.userPassword = userPassword;
-        this.userAddress = userAddress;
-        this.presentAddress = presentAddress;
-        this.accountType = accountType;
-        this.fatherName = fatherName;
-        this.MobilePhone=userPhone;
-        this.panNo = panNumber;
-        this.balance = balance;
-        this.dob = dob;
-        this.landline=landline;
+    public Users(String userName, String userEmail, String userPassword, String userPhone, String userAddress, String presentAddress, String accountType, String fatherName, String dob, String panNumber, String balance, String landline, String gender, String branchName) {
+      this.userName=userName;
+      this.userEmail=userEmail;
+      this.userPassword=userPassword;
+      this.MobilePhone=userPhone;
+      this.userAddress=userAddress;
+      this.presentAddress=presentAddress;
+      this.accountType=accountType;
+      this.fatherName=fatherName;
+      this.dob=dob;
+      this.panNo=panNumber;
+      this.balance=balance;
+      this.landline=landline;
+      this.gender=gender;
+      this.branchName=branchName;
     }
 
-    //auto generate account no when user create account
+
+
+    //auto generate numbers when user create account
     @PrePersist
     public void generateNo(){
         //a random 10 digit number
         this.customerId = String.valueOf(Math.random()).substring(2, 12);
         this.accountNo = String.valueOf(Math.random()).substring(2,12);
         this.cardNumber = String.valueOf(Math.random()).substring(2,12);
+        switch (this.branchName) {
+            case "Ahmadabad":
+                this.ifscCode = "IFSC-AHM";
+                break;
+            case "Haryana":
+                this.ifscCode = "IFSC-HRY";
+                break;
+            case "Mumbai":
+                this.ifscCode = "IFSC-MUM";
+                break;
+            case "Pune":
+                this.ifscCode = "IFSC-PUN";
+                break;
+            case "Chandigarh":
+                this.ifscCode = "IFSC-CHD";
+                break;
+            case "Bangalore":
+                this.ifscCode = "IFSC-BLR";
+                break;
+        }
     }
 
-    public Users(int userId, String userEmail, String userPassword, String userName, String fatherName, String dob, String gender, String userAddress, String presentAddress, String panNo, String mobilePhone, String landline, String accountType, String balance) {
-        this.userId = userId;
-        this.userEmail = userEmail;
-        this.userPassword = userPassword;
-        this.userName = userName;
-        this.fatherName = fatherName;
-        this.dob = dob;
-        this.gender = gender;
-        this.userAddress = userAddress;
-        this.presentAddress = presentAddress;
-        this.panNo = panNo;
-        this.MobilePhone = mobilePhone;
-        this.landline = landline;
-        this.accountType = accountType;
-        this.balance = balance;
-    }
 
     public int getUserId() {
         return userId;

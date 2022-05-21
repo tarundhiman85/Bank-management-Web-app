@@ -7,13 +7,13 @@
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
-    <div class="collapse navbar-collapse">
-        <ul class="navbar-nav">
-            <li class="nav-item">
-                <a class="nav-link" href="account.jsp">Account Details</a>
-            </li>
-        </ul>
-    </div>
+<%--    <div class="collapse navbar-collapse">--%>
+<%--        <ul class="navbar-nav">--%>
+<%--            <li class="nav-item">--%>
+<%--                <a class="nav-link" href="account.jsp">Account Details</a>--%>
+<%--            </li>--%>
+<%--        </ul>--%>
+<%--    </div>--%>
     <div class="collapse navbar-collapse">
         <ul class="navbar-nav">
             <li class="nav-item">
@@ -40,6 +40,13 @@
         <ul class="navbar-nav">
             <li class="nav-item">
                 <a class="nav-link" href="CreateAccount.jsp">Create Account</a>
+            </li>
+        </ul>
+    </div>
+    <div class="collapse navbar-collapse">
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a class="nav-link" href="customerProfile.jsp">Customer Profile</a>
             </li>
         </ul>
     </div>
