@@ -1,3 +1,4 @@
+//----------------------------------- Verify Password -----------------------------------
 function verifyPassword() {
     var pass = document.getElementById("password").value;
     var repass = document.getElementById("confirm_password").value;

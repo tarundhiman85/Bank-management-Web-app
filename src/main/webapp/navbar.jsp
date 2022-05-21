@@ -49,7 +49,7 @@
     <div id="right">
         <ul class="navbar-nav log_cursor">
         <li class="nav-item ">
-            <a class="nav-link " data-toggle="modal" data-target="#loginExample" style="cursor: pointer;">Login</a>
+            <a class="nav-link " data-toggle="modal" data-target="login.jsp" style="cursor: pointer;">Login</a>
         </li>
         </ul>
     </div>

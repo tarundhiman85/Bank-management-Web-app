@@ -10,8 +10,8 @@
 <head>
     <title>Register</title>
     <%@include file="/common_css_js.jsp"%>
-<%--    <%@include file="js/script.js"  %>--%>
-<%--    <script src="js/script.js"></script>--%>
+    <%--    <%@include file="js/script.js"  %>--%>
+    <%--    <script src="js/script.js"></script>--%>
 </head>
 <body class="back">
 <%@include file="navbar.jsp"%>
@@ -93,9 +93,21 @@
                         <div class="form-group">
                             <label>Type of Account &nbsp</label>
                             <label for="account_type"></label><select name="account_type" id="account_type" required class="form-control">
-                                <option value="saving">Saving</option>
-                                <option value="current">Current</option>
-                            </select>
+                            <option value="saving">Saving</option>
+                            <option value="current">Current</option>
+                        </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Select Branch</label>
+                            <label for="branch"></label><select name="branch" id="branch" required class="form-control">
+                            <option value="ahmadabad">Ahmadabad</option>
+                            <option value="bangalore">Bangalore</option>
+                            <option value="chandigarh">Chandigarh</option>
+                            <option value="Haryana">haryana</option>
+                            <option value="pune">Pune</option>
+                            <option value="mumbai">Mumbai</option>
+                        </select>
                         </div>
 
                         <div class="form-group">
