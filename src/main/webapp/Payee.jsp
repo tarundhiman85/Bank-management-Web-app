@@ -23,6 +23,7 @@
         <div class="col-sm">
             <a href="AddPayee.jsp">
                 <div class="Payee-box">
+                    <i class="fa-solid fa-user-plus" style="font-size: 30px"></i><br>
                     <label>Add Payee</label>
                 </div>
             </a>
@@ -30,6 +31,7 @@
         <div class="col-sm">
             <a href="#">
                 <div class="Payee-box">
+                    <i class="fa-solid fa-user-xmark" style="font-size: 30px"></i><br>
                     <label>Delete Payee</label>
                 </div>
             </a>
@@ -38,13 +40,13 @@
         <div class="col-sm">
             <a href="#">
                 <div class="Payee-box">
+                    <i class="fa-solid fa-users-viewfinder" style="font-size: 30px"></i><br>
                     <label>View Payee</label>
                 </div>
             </a>
         </div>
     </div>
 </div>
-
 <%@include file="common_modals.jsp"%>
 </body>
 </html>
