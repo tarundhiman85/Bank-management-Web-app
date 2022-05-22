@@ -45,6 +45,8 @@ public class Users {
     @Column(length = 10, name = "ifsc_code")
     private String ifscCode;
     private int RoleId;
+    private String LoginStatus="false";
+
     public Users(){}
 
     public Users(String userName, String userEmail, String userPassword, String userPhone, String userAddress, String presentAddress, String accountType, String fatherName, String dob, String panNumber, String balance, String landline, String gender, String branchName) {
@@ -64,7 +66,13 @@ public class Users {
       this.branchName=branchName;
     }
 
+    public String getLoginStatus() {
+        return LoginStatus;
+    }
 
+    public void setLoginStatus(String loginStatus) {
+        LoginStatus = loginStatus;
+    }
 
     //auto generate numbers when user create account
     @PrePersist
