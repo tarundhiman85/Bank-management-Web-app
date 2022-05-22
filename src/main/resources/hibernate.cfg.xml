@@ -14,5 +14,7 @@
         <property name="format_sql">true</property>
         <mapping class="com.project.entities.Users"/>
         <mapping class="com.project.entities.Transact"/>
+        <mapping class="com.project.entities.BranchDetails"/>
+        <mapping class="com.project.entities.UserCredentials"/>
     </session-factory>
 </hibernate-configuration>

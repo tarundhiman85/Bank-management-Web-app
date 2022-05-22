@@ -91,10 +91,12 @@ public class RegisterServlet extends HttpServlet {
                             branchDetails.setCity("Chandigarh");
                             break;
                     }
+
                     //Creating a constructor based on the parameters receive
                     Users user=null;
                     if(presentAddress!=null) { user=new Users(userName,userEmail,userPassword,userPhone,userAddress,presentAddress,accountType,fatherName,dob,panNumber,balance,landline,gender,branchName);}
                     else {user=new Users(userName,userEmail,userPassword,userPhone,userAddress,userAddress,accountType,fatherName,dob,panNumber,balance,landline,gender,branchName);}
+                    branchDetails.setUser(user);
 
                     //Creating UserCredentials Page
                     UserCredentials userCredentials  = new UserCredentials();
@@ -102,7 +104,7 @@ public class RegisterServlet extends HttpServlet {
                     if(user.getRoleId()==2) userCredentials.setUserType("Customer");
                     else userCredentials.setUserType("Admin");
                     userCredentials.setLoginStatus(user.getLoginStatus());
-
+                    userCredentials.setPassword(user.getUserPassword());
                     //Saving the data in the database
                     Session session = FactoryProvider.getFactory().openSession();
                     Transaction transaction = session.beginTransaction();
