@@ -2,7 +2,7 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-  <title>Register</title>
+  <title>View Account</title>
   <%@include file="/common_css_js.jsp"%>
 </head>
 <body class="back">
@@ -33,10 +33,8 @@
             </div>
             <div class="form-group">
                <lable for="gender">Gender</lable>
-
-                <input required type="radio" name="gender">Male
-                <input required type="radio" name="gender">Female
-
+               <input required type="radio" name="gender">Male
+               <input required type="radio" name="gender">Female
             </div>
             <div class="form-group">
                <label for="phone">Mobile Number</label>
