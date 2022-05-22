@@ -35,16 +35,21 @@
             </li>
         </ul>
     </div>
+
+    <div class="collapse navbar-collapse">
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a class="nav-link" href="CreateAccount.jsp">Create Account</a>
+            </li>
+        </ul>
+    </div>
     <%
         if(user1==null){
     %>
     <div id="right">
         <ul class="navbar-nav log_cursor">
         <li class="nav-item ">
-            <a class="nav-link " data-toggle="modal" data-target="#loginExample" style="cursor: pointer;">Login</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link log_cursor" href="register.jsp">Sign Up</a>
+            <a class="nav-link " data-toggle="modal" data-target="login.jsp" style="cursor: pointer;">Login</a>
         </li>
         </ul>
     </div>
