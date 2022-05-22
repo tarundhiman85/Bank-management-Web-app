@@ -137,11 +137,26 @@ div#boxs {
     font-weight: bold;
     margin-right: 20px;
 }
+#register:hover{
+    background-color: #72d3f1;
+    border: solid 1px #72d3f1;
+    color: #001F32FF;
+    font-weight: bold;
+    margin-right: 20px;
+    transition: 0.3s;
+}
 #reset{
     background-color: rgba(37,150,190,0);
     border: solid 1px #72d3f1;
     color: #72d3f1;
     font-weight: bold;
+}
+#reset:hover{
+    background-color: #72d3f1;
+    border: solid 1px #72d3f1;
+    color: #001F32FF;
+    font-weight: bold;
+    transition: 0.3s;
 }
 .card-body{
     max-width: 700px;
@@ -175,6 +190,26 @@ div#boxs {
     padding: 5%;
     color: #001F32FF;
     border: 2px solid #001F32FF;
+    background-color: #72d3f1;
+    transition: 0.4s;
+}
+.col-sm{
+    padding-top: 10%;
+    text-align: center;
+}
+.Payee-box{
+    font-size: 30px;
+    color: white;
+    padding: 15px;
+    border: 2px solid #72d3f1;
+    background-color: #001F32FF;
+}
+.Payee-box:hover{
+    font-size: 30px;
+    color: #001F32FF;
+    text-decoration: none;
+    padding: 15px;
+    border: 2px solid #72d3f1;
     background-color: #72d3f1;
     transition: 0.4s;
 }
