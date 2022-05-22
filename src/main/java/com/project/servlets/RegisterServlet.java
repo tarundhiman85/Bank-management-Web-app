@@ -1,5 +1,7 @@
 package com.project.servlets;
 
+import com.project.entities.BranchDetails;
+import com.project.entities.UserCredentials;
 import com.project.entities.Users;
 import com.project.helper.FactoryProvider;
 import org.hibernate.Session;
@@ -32,6 +34,7 @@ public class RegisterServlet extends HttpServlet {
                 String presentAddress=request.getParameter("present_address");
                 String accountType=request.getParameter("account_type");
                 String landline = request.getParameter("LNumber");
+                String branchName = request.getParameter("branch");
                 //get father name
                 String fatherName=request.getParameter("fathers_name");
                 //get pan number
@@ -49,14 +52,63 @@ public class RegisterServlet extends HttpServlet {
                     httpSession.setAttribute("message", clickedSubmit);
                     response.sendRedirect("CreateAccount.jsp");
                 }
+                if(Integer.parseInt(balance)<5000){
+                    httpSession.setAttribute("message", "Opening Balance should be greater than 5000");
+                    response.sendRedirect("CreateAccount.jsp");
+                }
                 else{
-                    //creating a constructor based on the parameters receive
+                    //creating branch data
+                    BranchDetails branchDetails=new BranchDetails();
+                    switch (branchName) {
+                        case "Ahmadabad":
+                            branchDetails.setBranchName("Ahmadabad-Branch");
+                            branchDetails.setState("Gujarat");
+                            branchDetails.setCity("Ahmadabad");
+                            break;
+                        case "Pune":
+                            branchDetails.setBranchName("Pune-Branch");
+                            branchDetails.setState("Maharashtra");
+                            branchDetails.setCity("Pune");
+                            break;
+                        case "Mumbai":
+                            branchDetails.setBranchName("Mumbai-Branch");
+                            branchDetails.setState("Maharashtra");
+                            branchDetails.setCity("Mumbai");
+                            break;
+                        case "Haryana":
+                            branchDetails.setBranchName("Haryana-Branch");
+                            branchDetails.setState("Haryana");
+                            branchDetails.setCity("Gurgaon");
+                            break;
+                        case "Bangalore":
+                            branchDetails.setBranchName("Bangalore-Branch");
+                            branchDetails.setState("Karnataka");
+                            branchDetails.setCity("Bangalore");
+                            break;
+                        case "Chandigarh":
+                            branchDetails.setBranchName("Chandigarh-Branch");
+                            branchDetails.setState("Chandigarh");
+                            branchDetails.setCity("Chandigarh");
+                            break;
+                    }
+                    //Creating a constructor based on the parameters receive
                     Users user=null;
-                    if(presentAddress!=null) { user=new Users(userName,userEmail,userPassword,userPhone,userAddress,presentAddress,accountType,fatherName,dob,panNumber,balance,landline,gender);}
-                    else {user=new Users(userName,userEmail,userPassword,userPhone,userAddress,userAddress,accountType,fatherName,dob,panNumber,balance,landline,gender);}
+                    if(presentAddress!=null) { user=new Users(userName,userEmail,userPassword,userPhone,userAddress,presentAddress,accountType,fatherName,dob,panNumber,balance,landline,gender,branchName);}
+                    else {user=new Users(userName,userEmail,userPassword,userPhone,userAddress,userAddress,accountType,fatherName,dob,panNumber,balance,landline,gender,branchName);}
+
+                    //Creating UserCredentials Page
+                    UserCredentials userCredentials  = new UserCredentials();
+                    userCredentials.setUserID(user.getUserId());
+                    if(user.getRoleId()==2) userCredentials.setUserType("Customer");
+                    else userCredentials.setUserType("Admin");
+                    userCredentials.setLoginStatus(user.getLoginStatus());
+
+                    //Saving the data in the database
                     Session session = FactoryProvider.getFactory().openSession();
                     Transaction transaction = session.beginTransaction();
                     transaction.commit();
+                    session.save(userCredentials);
+                    session.save(branchDetails);
                     int userId= (int)session.save(user);
                     session.close();
                     httpSession.setAttribute("current-user",user);
