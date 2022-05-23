@@ -13,7 +13,7 @@
       <div class="card">
         <div class="card-body px-5">
           <h4 class="text-center my-3">View Account</h4>
-          <form action="RegisterServlet" method="post">
+<%--          <form action="RegisterServlet" method="post">--%>
 
             <div class="form-group">
               <label for="name">User Full Name </label>
@@ -32,9 +32,12 @@
               <input name="User_dob" required type="date" class="form-control" id="DOB" >
             </div>
             <div class="form-group">
-               <lable for="gender">Gender</lable>
-               <input required type="radio" name="gender">Male
-               <input required type="radio" name="gender">Female
+              <label for="gender">Gender</label>
+              <select name="gender" id="gender" required class="form-control">
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
+                <option value="Others">Others</option>
+              </select>
             </div>
             <div class="form-group">
                <label for="phone">Mobile Number</label>
@@ -52,7 +55,7 @@
             </div>
 
             <div class="form-group">
-              <lable for="phone">User Address</lable>
+              <lable for="phone">Permanent Address</lable>
               <textarea name="user_address" required style="height: 150px" class="form-control" placeholder="Enter your address"></textarea>
 
             </div>
@@ -71,7 +74,7 @@
             </div>
             <div class="form-group">
                <label for="balance">Opening Balance</label>
-               <input name="open-balance"  required type="number" class="form-control" id="balance" placeholder="Enter your opening balance" aria-describedby="emailHelp">
+               <input name="open-balance"  required type="number" class="form-control" id="balance" placeholder="Check your opening balance" aria-describedby="emailHelp">
             </div>
             <div class="form-group">
               <label for="card" >User Card Number</label>
@@ -80,8 +83,13 @@
             <div class="form-group">
               <lable for="custom">Customer ID</lable>
               <input name="custom_id" required type="number" class="form-control" id="custom" placeholder="Enter your Customer id here" aria-describedby="emailHelp">
+            </div>
+            <div class="form-group">
+              <button type="button" id="button" >View</button>
+              <button type="add" id="reset">Add</button>
 
             </div>
+
 
 
           </form>
