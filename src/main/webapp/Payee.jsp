@@ -28,6 +28,16 @@
                 </div>
             </a>
         </div>
+
+        <div class="col-sm">
+            <a href="ActivatePayee.jsp">
+                <div class="Payee-box">
+                    <i class="fa-solid fa-circle-check" style="font-size: 30px"></i><br>
+                    <label>Activate Payee</label>
+                </div>
+            </a>
+        </div>
+
         <div class="col-sm">
             <a href="#">
                 <div class="Payee-box">
