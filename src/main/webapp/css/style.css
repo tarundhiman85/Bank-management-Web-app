@@ -165,26 +165,6 @@ div#boxs {
     justify-content: center;
     margin-top: 30px;
 }
-/* below code for customer Portal */
-
-
-.mt-6{
-    margin-left: 30%
-}
-.col-6 {
-    padding-top: 5%;
-    text-align: center;
-    color: white;
-}
-
-.boxDiv{
-    color: white;
-    padding: 10px;
-    border: 2px solid #72d3f1;
-    background-color: #001F32FF;
-
-
-}
 
 .boxDiv:hover{
     padding: 5%;
@@ -194,18 +174,18 @@ div#boxs {
     transition: 0.4s;
 }
 .col-sm{
-    padding-top: 10%;
+    padding-top: 5%;
     text-align: center;
 }
 .Payee-box{
-    font-size: 30px;
+    font-size: 15px;
     color: white;
     padding: 15px;
     border: 2px solid #72d3f1;
     background-color: #001F32FF;
 }
 .Payee-box:hover{
-    font-size: 30px;
+    font-size: 15px;
     color: #001F32FF;
     text-decoration: none;
     padding: 15px;
