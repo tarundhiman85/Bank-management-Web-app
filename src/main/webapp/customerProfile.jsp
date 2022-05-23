@@ -21,11 +21,11 @@
     <h3  style="text-align: center; color: #72d3f1; padding-top: 5%">
         Customer Profile
     </h3>
-    <div class="row" style="padding-top: 1px">
+    <div class="row" >
         <div class="col-sm">
             <a href="#">
                 <div class="Payee-box">
-                    <i class="fa fa-bank"></i><br>
+                    <i class="fa fa-bank" style="font-size:50px"></i><br>
                     <label>Account Summary</label>
                 </div>
             </a>
@@ -33,7 +33,7 @@
         <div class="col-sm">
             <a href="#">
                 <div class="Payee-box">
-                    <i class="fa fa-inr"></i><br>
+                    <i class="fa fa-inr" style="font-size:50px"></i><br>
                     <label>Account Statement</label>
                 </div>
             </a>
@@ -44,7 +44,7 @@
         <div class="col-sm">
             <a href="#">
                 <div class="Payee-box">
-                    <i class="fa-solid fa-sack-dollar"></i><br>
+                    <i class="fa-solid fa-sack-dollar" style="font-size:50px"></i><br>
                     <label>FD and RD</label>
                 </div>
             </a>
@@ -52,7 +52,7 @@
         <div class="col-sm">
             <a href="#">
                 <div class="Payee-box">
-                    <i class="fa fa-user-circle-o"></i><br>
+                    <i class="fa fa-user-circle-o" style="font-size:50px"></i><br>
                     <label>View Account</label>
                 </div>
             </a>
@@ -63,7 +63,7 @@
         <div class="col-sm">
             <a href="#">
                 <div class="Payee-box">
-                    <i class="fa-solid fa-money-bill-transfer"></i><br>
+                    <i class="fa-solid fa-money-bill-transfer" style="font-size:50px"></i><br>
                     <label>Fund Transfer</label>
                 </div>
             </a>
@@ -71,7 +71,7 @@
         <div class="col-sm">
             <a href="#">
                 <div class="Payee-box">
-                    <i class="fa-solid fa-money-bill-trend-up"></i><br>
+                    <i class="fa-solid fa-money-bill-trend-up" style="font-size:50px"></i><br>
                     <label>Payee</label>
                 </div>
             </a>
