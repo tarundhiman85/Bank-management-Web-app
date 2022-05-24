@@ -39,7 +39,7 @@
         </div>
 
         <div class="col-sm">
-            <a href="#">
+            <a href="DeletePayee.jsp">
                 <div class="Payee-box">
                     <i class="fa-solid fa-user-xmark" style="font-size: 30px"></i><br>
                     <label>Delete Payee</label>
@@ -48,7 +48,7 @@
 
         </div>
         <div class="col-sm">
-            <a href="#">
+            <a href="ViewPayee.jsp">
                 <div class="Payee-box">
                     <i class="fa-solid fa-users-viewfinder" style="font-size: 30px"></i><br>
                     <label>View Payee</label>
