@@ -12,68 +12,72 @@
 <head>
     <meta charset="UTF-8">
     <%@include file="/common_css_js.jsp"%>
-    <style>
-        *{
-            margin: 0;
-            padding: 0;
-        }
-        h2 {
-            color: aliceblue;
-            font-family: 'Times New Roman', Times, serif;
-            font-size: 20px;
-            padding-top: 40px;
-
-        }
-        .fa-color {
-            color: rgb(255, 166, 0);
-        }
-        .topnav a.active{
-            float: left;
-            color: white;
-            text-align: center;
-            background-color: rgb(40, 87, 112);
-            text-decoration: none;
-            font-size: 17px;
-        }
-    </style>
     <title>Customer Portal</title>
 </head>
 
 <body class="back">
 <%@include file="navbar.jsp"%>
-<div class="topnav">
-    <a class="active" href="#">XYZ Bank</a>
-<%--    <h2>CUSTOMER PORTAL</h2>--%>
-    <div class="container mt-5">
-        <div class="row">
-            <div class="col-12">
-                <div class="col-3 border-right  float-left offset-1">
-                    <i class="fa fa-bank ml-5  fa-color" style="font-size:30px "></i>
-                    <h5><a href="#" class="text-center"> Accounts Summary </a></h5>
+<div class="container">
+<%--    <h4 style="text-align: center;  color: #72d3f1">Customer Profile </h4>--%>
+    <div class="row mt-6">
+        <div class="col-6 col-sm-3">
+            <a href="#">
+                <div class="boxDiv">
+                    <i class="fa fa-bank  K " style="font-size:42px  "></i><br>
+                    <lable>Account Summary</lable><br>
                 </div>
-                <div class="col-3 border-right float-left offset-1 ">
-                    <i class="fa fa-inr ml-5   fa-color" style="font-size:30px"></i>
-                    <h5><a href="#" class="text-center"> Account Statement </a></h5>
+            </a>
+        </div>
+        <div class="col-6 col-sm-3">
+            <a href="#">
+                <div class="boxDiv">
+                    <i class="fa fa-inr   K " style="font-size:42px"></i><br>
+                    <lable>Account Statement</lable><br>
                 </div>
+            </a>
+        </div>
 
-            </div>
-            <br>
-            <br>
+        <!-- Force next columns to break to new line -->
+        <div class="w-100"></div>
 
-            <div class="col-12 mt-5">
-                <div class="col-3 border-right float-left offset-1 ">
-                    <i class="fa-solid fa-sack-dollar ml-4   fa-color" style="font-size:30px"></i>
-                    <h5><a href="#" class="text-center"> FD and RD </a></h5>
+        <div class="col-6 col-sm-3">
+            <a href="#">
+                <div class="boxDiv">
+                    <i class="fa-solid fa-sack-dollar  K  " style="font-size:42px"></i><br>
+                    <label>FD and RD</label><br>
                 </div>
-                <div class="col-3 border-right float-left offset-1 ">
-                    <i class="fa fa-user-circle-o ml-5    fa-color" style="font-size:30px"></i>
-                    <h5><a href="#" class="text-center"> View Account </a></h5>
+            </a>
+        </div>
+        <div class="col-6 col-sm-3">
+            <a href="#">
+                <div class="boxDiv">
+                    <i class="fa fa-user-circle-o  K  " style="font-size:47px"></i><br>
+                    <lable>View Account</lable><br>
                 </div>
-            </div>
+            </a>
+        </div>
+
+        <!-- Force next columns to break to new line -->
+        <div class="w-100"></div>
+
+        <div class="col-6 col-sm-3">
+            <a href="FundTransfer.jsp">
+                <div class="boxDiv">
+                    <i class="fa-solid fa-money-bill-transfer k5 " style="font-size:42px"></i><br>
+                    <label>Fund Transfer</label><br>
+                </div>
+            </a>
+        </div>
+        <div class="col-6 col-sm-3">
+            <a href="#">
+                <div class="boxDiv">
+                    <i class="fa-solid fa-money-bill-trend-up k6 " style="font-size:42px"></i><br>
+                    <label>Payee</label><br>
+                </div>
+            </a>
         </div>
     </div>
 </div>
-
 <%@include file="common_modals.jsp"%>
 </body>
 

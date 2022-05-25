@@ -7,13 +7,20 @@
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
-    <div class="collapse navbar-collapse">
+
+    <%
+        if(user1==null){
+    %>
+    <div id="right">
         <ul class="navbar-nav">
             <li class="nav-item">
-                <a class="nav-link" href="account.jsp">Account Details</a>
+                <a class="nav-link" href="login.jsp">Login</a>
             </li>
         </ul>
     </div>
+    <%
+    } else if(user1.getRoleId()==2){
+    %>
     <div class="collapse navbar-collapse">
         <ul class="navbar-nav">
             <li class="nav-item">
@@ -35,22 +42,13 @@
             </li>
         </ul>
     </div>
-    <%
-        if(user1==null){
-    %>
-    <div id="right">
-        <ul class="navbar-nav log_cursor">
-        <li class="nav-item ">
-            <a class="nav-link " data-toggle="modal" data-target="#loginExample" style="cursor: pointer;">Login</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link log_cursor" href="register.jsp">Sign Up</a>
-        </li>
+    <div class="collapse navbar-collapse">
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a class="nav-link" href="customerProfile.jsp">Customer Profile</a>
+            </li>
         </ul>
     </div>
-    <%
-    } else{
-    %>
     <div id="right">
         <ul class="navbar-nav log_cursor">
             <li class="nav-item ">
@@ -62,7 +60,58 @@
         </ul>
     </div>
     <%
+    } else if(user1.getRoleId()==1){
+    %>
+    <div class="collapse navbar-collapse">
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a class="nav-link" href="deposit.jsp">Deposit Funds</a>
+            </li>
+        </ul>
+    </div>
+    <div class="collapse navbar-collapse">
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a class="nav-link" href="loan.jsp">Loan Offers</a>
+            </li>
+        </ul>
+    </div>
+    <div class="collapse navbar-collapse">
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a class="nav-link" href="withdraw.jsp">Withdraw Money</a>
+            </li>
+        </ul>
+    </div>
+    <div class="collapse navbar-collapse">
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a class="nav-link" href="customerProfile.jsp">Customer Profile</a>
+            </li>
+        </ul>
+    </div>
+    <div class="collapse navbar-collapse">
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a class="nav-link" href="CreateAccount.jsp">Create Account</a>
+            </li>
+        </ul>
+    </div>
+
+    <div id="right">
+        <ul class="navbar-nav log_cursor">
+            <li class="nav-item ">
+                <a class="nav-link"  style="cursor: pointer;"><%=user1.getUserName()%></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link log_cursor" href="LogoutServlet">Log out</a>
+            </li>
+        </ul>
+    </div>
+
+    <%
         }
     %>
-</nav>
 
+</nav>
+<%@include file="common_modals.jsp"%>

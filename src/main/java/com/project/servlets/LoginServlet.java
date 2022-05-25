@@ -21,7 +21,7 @@ public class LoginServlet extends HttpServlet {
             String password = request.getParameter("password");
             UserDao userDao = new UserDao(FactoryProvider.getFactory());
             Users user=userDao.getUserByEmailandPassword(email,password);  //this is returning basically user object
-
+            user.setLoginStatus("true");
             HttpSession httpSession=request.getSession();
             if(user == null){
                 //user does not exist
