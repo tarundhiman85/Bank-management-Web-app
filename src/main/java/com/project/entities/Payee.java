@@ -11,7 +11,7 @@ public class Payee {
     private String pName;
     private String pIFSC;
     private boolean activated = false;
-    @ManyToOne(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+    @ManyToOne(fetch = FetchType.LAZY, cascade = CascadeType.DETACH)
     @JoinColumn(name = "user_id")
     private Users user;
 

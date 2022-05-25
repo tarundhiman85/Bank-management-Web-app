@@ -105,7 +105,7 @@ public class RegisterServlet extends HttpServlet {
                     if(user.getRoleId()==2) userCredentials.setUserType("Customer");
                     else userCredentials.setUserType("Admin");
                     userCredentials.setLoginStatus(user.getLoginStatus());
-
+                    userCredentials.setPassword(user.getUserPassword());
                     //Saving the data in the database
                     Session session = FactoryProvider.getFactory().openSession();
                     Transaction transaction = session.beginTransaction();

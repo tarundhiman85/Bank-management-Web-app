@@ -30,7 +30,7 @@ else{
     <%
         }else{
     %>
-    <h6>Enter the Withdraw Amount</h6>
+    <h6>Enter to Withdraw Amount</h6>
     <input name="withdraw_amount" required type="number" class="form-control" placeholder="Enter amount between 1 to <%=user.getBalance()%>">
     <input id="deposit1" type="submit" value="Withdraw">
 </form>
