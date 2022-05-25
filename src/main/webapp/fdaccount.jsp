@@ -22,12 +22,12 @@
 
                         <div class="form-group">
                             <label for="phone" >Deposit Amount :</label>
-                            <input name="user_phone" required type="number" class="form-control" id="phone4" placeholder="Enter Deposit Amount" aria-describedby="emailHelp" >
+                            <input name="deposit_amount" required type="number" class="form-control" id="phone4" placeholder="Enter Deposit Amount" aria-describedby="emailHelp" >
                         </div>
 
                         <div class="form-group">
                             <label for="phone" >Tenure Of Deposit :</label><br>
-                            <select name="name" class="btn1" required>
+                            <select name="tenure" class="btn1" required>
                                 <option value="saving">--Select--</option>
                                 <option value="saving">6 Months</option>
                                 <option value="current">12 Months</option>
@@ -39,7 +39,7 @@
                         </div>
 
                         <div class="form-group">
-                            <label for="kt" >Current Intrest Rate  :</label><br>
+                            <label for="kt" >Current Interest Rate  :</label><br>
 
                             <input type="radio" id="kt" name="fav_language" value="Regular Deposit" >
                             <label for="kt"> 6.5% </label>
@@ -47,41 +47,28 @@
                         </div>
 
                         <div class="form-group">
-                            <label for="phone" >Maturity Amount  :</label>
+                            <%--@declare id="phone"--%><label for="phone" >Maturity Amount  :</label>
                             <input name="user_phone" required type="number" class="form-control" id="phone1" placeholder="Enter Maturity Amount" >
                         </div>
 
                         <div class="form-group">
-                            <label for="phone" >Maturity Date  :</label><br>
+                            <label for="start" >Maturity Date  :</label><br>
                             <!--<input name="user_phone" required type="number" class="form-control" id="phone" placeholder="DD/MM/YY">-->
-                            <input type="date" id="start" name="trip-start" class="form-control" id="phone"
+                            <input type="date" id="start" name="trip-start" class="form-control"
                                    value="2018-07-22"
                                    min="2018-01-01" max="2030-12-31">
-
                         </div>
-
-                        <!-- <div class="form-group">
-                             Type of Account &nbsp
-                             <select name="account_type" class="btn1" required>
-                                 <option value="saving">Saving</option>
-                                 <option value="current">Current</option>
-                             </select>
-                         </div>-->
-
 
 
 
                         <div class="form-group">
-
 
                             <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
                             <label for="vehicle1"> I wish to save this asa my FD template for further use. </label><br>
                             <input type="checkbox" id="vehicle2" name="vehicle1" value="Bike">
                             <label for="vehicle2"> I accept the Terms and Conditions of the Bank. </label><br>
 
-
                         </div>
-
 
                         <div class="container text-center">
                             <button id="deposit1">Confirm</button>

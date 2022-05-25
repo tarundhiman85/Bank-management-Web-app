@@ -39,7 +39,7 @@
                         </div>
 
                         <div class="form-group">
-                            <label for="kt" >Current Intrest Rate  :</label><br>
+                            <label for="kt" >Current Interest Rate  :</label><br>
 
                             <input type="radio" id="kt" name="fav_language" value="Regular Deposit" >
                             <label for="kt"> 6.5% </label>
@@ -59,17 +59,6 @@
                                    min="2018-01-01" max="2030-12-31">
 
                         </div>
-
-                        <!-- <div class="form-group">
-                             Type of Account &nbsp
-                             <select name="account_type" class="btn1" required>
-                                 <option value="saving">Saving</option>
-                                 <option value="current">Current</option>
-                             </select>
-                         </div>-->
-
-
-
 
                         <div class="form-group">
 
