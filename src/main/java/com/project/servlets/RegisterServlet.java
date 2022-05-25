@@ -47,14 +47,17 @@ public class RegisterServlet extends HttpServlet {
                 if(userName==null){
                     httpSession.setAttribute("message", "User Name cannot be null");
                     response.sendRedirect("CreateAccount.jsp");
+                    return;
                 }
                 if(!(clickedSubmit.equals("no"))){
                     httpSession.setAttribute("message", clickedSubmit);
                     response.sendRedirect("CreateAccount.jsp");
+                    return;
                 }
                 if(Integer.parseInt(balance)<5000){
                     httpSession.setAttribute("message", "Opening Balance should be greater than 5000");
                     response.sendRedirect("CreateAccount.jsp");
+
                 }
                 else{
                     //creating branch data
