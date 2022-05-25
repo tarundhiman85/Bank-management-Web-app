@@ -16,6 +16,7 @@
 <%@include file="navbar.jsp"%>
 
 <div class="container">
+    <%@include file="message.jsp"%>
     <h3  style="text-align: center; color: #72d3f1; padding-top: 5%">
         PAYEE DETAILS
     </h3>

@@ -19,14 +19,14 @@
             <div class="card mt-3">
                 <div class="card-body">
                     <%@include file="message.jsp"%>
-                    <form action="LoginServlet" method="post">
+                    <form action="PayeeServlet" method="post">
                         <div class="form-group">
                             <h3>Add new payee</h3>
                         </div>
 
                         <div class="form-group">
                             <label for="Account Number">Account Number</label>
-                            <input name="Account Number" type="text" style="border:1px solid #72d3f1;" class="form-control" id="Account Number" aria-describedby="emailHelp" placeholder="Enter payee's account number">
+                            <input name="Account_Number" type="text" style="border:1px solid #72d3f1;" class="form-control" id="Account Number" aria-describedby="emailHelp" placeholder="Enter payee's account number">
                         </div>
 
                         <div class="form-group">
@@ -48,6 +48,7 @@
                             <button type="submit" id="register">Add</button>
                             <button type="reset" id="reset">Cancel</button>
                         </div>
+                        <input type="hidden" id="hiddenSubmit" value="Add" name="PayeeOp"/>
                     </form>
                 </div>
             </div>

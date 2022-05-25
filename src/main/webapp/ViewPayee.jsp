@@ -1,4 +1,6 @@
-<%--
+<%@ page import="com.project.entities.Payee" %>
+<%@ page import="java.util.List" %>
+<%@ page import="com.project.dao.UserDao" %><%--
   Created by IntelliJ IDEA.
   User: shubh
   Date: 22-05-2022
@@ -19,36 +21,31 @@
             <div class="card mt-3">
                 <div class="card-body">
                     <%@include file="message.jsp"%>
-                    <form action="LoginServlet" method="post">
-                        <div class="form-group">
-                            <h3>View payee</h3>
-                        </div>
+<%--                    by jsp get list of payee--%>
+                    <%Users user = (Users) session.getAttribute("current-User");
+                    List<Payee> payeeList = new UserDao().getPayeeList(user.getUserId());
+                    %>
+                    <% if(payeeList!=null && payeeList.size()>0){ %>
+                        <table class="table table-striped table-bordered">
+                            <thead>
+                            <tr>
+                                <th>Payee Name</th>
+                                <th>Account Number</th>
+                                <th>IFSC Code</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <% for(Payee payee:payeeList){ %>
+                                <tr>
+                                    <td><%=payee.getpName()%></td>
+                                    <td><%=payee.getpAccountNumber()%></td>
+                                    <td><%=payee.getpIFSC()%></td>
+                                </tr>
+                            <% }
+                            }%>
+                            </tbody>
 
-                        <div class="form-group">
-                            <label for="Account Number">Account Number</label>
-                            <input name="Account Number" type="text" style="border:1px solid #72d3f1;" class="form-control" id="Account Number" aria-describedby="emailHelp" placeholder="Enter payee's account number">
-                        </div>
-
-                        <div class="form-group">
-                            <label for="name">Name</label>
-                            <input name="name" type="text" style="border:1px solid #72d3f1;" class="form-control" id="name" aria-describedby="emailHelp" placeholder="Enter payee's name">
-                        </div>
-
-                        <div class="form-group">
-                            <label for="ifsc">IFSC Code</label>
-                            <input name="ifsc" type="text" style="border:1px solid #72d3f1;" class="form-control" id="ifsc" aria-describedby="emailHelp" placeholder="Enter your IFSC code">
-                        </div>
-
-                        <div class="form-group">
-                            <label for="exampleInputPassword1">Password</label>
-                            <input name="password" type="password" class="form-control" id="exampleInputPassword1" placeholder="Enter your password">
-                        </div>
-
-                        <div class="container text-center">
-                            <button type="submit" id="register">View</button>
-                            <button type="reset" id="reset">Cancel</button>
-                        </div>
-                    </form>
+                    </table>
                 </div>
             </div>
         </div>

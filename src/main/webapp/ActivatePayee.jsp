@@ -1,4 +1,7 @@
-<%--
+<%@ page import="com.project.entities.Payee" %>
+<%@ page import="com.project.dao.UserDao" %>
+<%@ page import="java.util.List" %>
+<%@ page import="com.project.helper.FactoryProvider" %><%--
   Created by IntelliJ IDEA.
   User: shubh
   Date: 22-05-2022
@@ -19,36 +22,45 @@
       <div class="card mt-3">
         <div class="card-body">
           <%@include file="message.jsp"%>
-          <form action="LoginServlet" method="post">
-            <div class="form-group">
-              <h3>Activate Payee</h3>
-            </div>
+          <%--                    by jsp get list of payee--%>
+          <%Users user = (Users) session.getAttribute("current-User");
+            List<Payee> payeeList = new UserDao(FactoryProvider.getFactory()).getPayeeList(user.getUserId());
+          %>
+          <% if(payeeList!=null && payeeList.size()>0){ %>
+          <table class="table table-striped table-bordered">
+            <thead>
+            <tr>
+              <th>Payee Name</th>
+              <th>Account Number</th>
+              <th>IFSC Code</th>
+              <th>Activate</th>
+              <%--                                <th>Delete</th>--%>
+            </tr>
+            </thead>
+            <tbody>
+            <% for(Payee payee:payeeList){ %>
+            <tr>
+              <td><%=payee.getpName()%></td>
+              <td><%=payee.getpAccountNumber()%></td>
+              <td><%=payee.getpIFSC()%></td>
+              <td>
+                <%if(!payee.isActivated()) {%>
+                  <form action="PayeeServlet" method="post">
+                    <input type="hidden" id="hiddenSubmit" value="Activate" name="PayeeOp"/>
 
-            <div class="form-group">
-              <label for="Account Number">Account Number</label>
-              <input name="Account Number" type="text" style="border:1px solid #72d3f1;" class="form-control" id="Account Number" aria-describedby="emailHelp" placeholder="Enter payee's account number">
-            </div>
+                    <input type="hidden" id="hiddenSubmitId" value="<%=payee.getpID()%>" name="payeeId"/>
+                    <input class="btn btn-primary" type="submit" value="Activate">
+                </form>
+                <%}else{%>
+                  <button class="btn btn-primary" disabled>Activated</button>
+                <%}%>
+              </td>
+            </tr>
+            <% }
+            }%>
+            </tbody>
 
-            <div class="form-group">
-              <label for="name">Name</label>
-              <input name="name" type="text" style="border:1px solid #72d3f1;" class="form-control" id="name" aria-describedby="emailHelp" placeholder="Enter payee's name">
-            </div>
-
-            <div class="form-group">
-              <label for="ifsc">IFSC Code</label>
-              <input name="ifsc" type="text" style="border:1px solid #72d3f1;" class="form-control" id="ifsc" aria-describedby="emailHelp" placeholder="Enter your IFSC code">
-            </div>
-
-            <div class="form-group">
-              <label for="exampleInputPassword1">Password</label>
-              <input name="password" type="password" class="form-control" id="exampleInputPassword1" placeholder="Enter your password">
-            </div>
-
-            <div class="container text-center">
-              <button type="submit" id="register">Activate</button>
-              <button type="reset" id="reset">Cancel</button>
-            </div>
-          </form>
+          </table>
         </div>
       </div>
     </div>
