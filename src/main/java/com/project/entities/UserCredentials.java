@@ -1,9 +1,6 @@
 package com.project.entities;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 @Entity
 public class UserCredentials {
@@ -14,12 +11,22 @@ public class UserCredentials {
     private int UserID;
     private String Password;
     private String LoginStatus;
-
+    @ManyToOne(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+    @JoinColumn(name = "user_id")
+    private Users user;
     public UserCredentials() {
 
     }
 
-    public UserCredentials( String userType, int userID, String password, String loginStatus) {
+    public Users getUser() {
+        return user;
+    }
+
+    public void setUser(Users user) {
+        this.user = user;
+    }
+
+    public UserCredentials(String userType, int userID, String password, String loginStatus) {
         UserType = userType;
         UserID = userID;
         Password = password;

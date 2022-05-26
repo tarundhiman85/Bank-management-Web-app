@@ -1,5 +1,6 @@
 package com.project.dao;
 
+import com.project.entities.RDAccount;
 import com.project.entities.Users;
 import com.project.helper.FactoryProvider;
 import org.hibernate.Session;
@@ -48,5 +49,36 @@ public class UserDao {
             e.printStackTrace();
         }
         return user;
+    }
+    public RDAccount getRDAccountByUserId(int id){
+        RDAccount rdAccount = null;
+        try {
+            //validation if the user exists
+            Session session = this.factory.openSession();
+            String q = "from RDAccount where user.userId=:i";
+            Query query = (Query) session.createQuery(q);
+            query.setParameter("i", id);
+            rdAccount = (RDAccount) query.uniqueResult();
+            session.close();
+        }
+        catch (Exception e){
+            e.printStackTrace();
+        }
+        return rdAccount;
+    }
+
+    public boolean updateRDAccount(RDAccount rd) {
+        boolean result = false;
+        try {
+            Session session = this.factory.openSession();
+            session.beginTransaction();
+            session.update(rd);
+            session.getTransaction().commit();
+            session.close();
+            result = true;
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return result;
     }
 }

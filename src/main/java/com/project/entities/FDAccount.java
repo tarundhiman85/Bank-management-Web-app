@@ -7,19 +7,18 @@ public class FDAccount {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
-    private String AccountNumber;
     private String DepositAmount;
     private String TenureOfDeposit;
     private String CurrentROI;
     private String MaturityAmount;
     private String MaturityDate;
-    @ManyToOne(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+    @ManyToOne(fetch = FetchType.LAZY, cascade = CascadeType.DETACH)
     @JoinColumn(name = "user_id")
     private Users user;
 
-    public FDAccount( String accountNumber, String depositAmount, String tenureOfDeposit, String currentROI, String maturityAmount, String maturityDate) {
+    public FDAccount( String depositAmount, String tenureOfDeposit, String currentROI, String maturityAmount, String maturityDate) {
 
-        AccountNumber = accountNumber;
+
         DepositAmount = depositAmount;
         TenureOfDeposit = tenureOfDeposit;
         CurrentROI = currentROI;
@@ -47,13 +46,6 @@ public class FDAccount {
         this.id = id;
     }
 
-    public String getAccountNumber() {
-        return AccountNumber;
-    }
-
-    public void setAccountNumber(String accountNumber) {
-        AccountNumber = accountNumber;
-    }
 
     public String getDepositAmount() {
         return DepositAmount;
