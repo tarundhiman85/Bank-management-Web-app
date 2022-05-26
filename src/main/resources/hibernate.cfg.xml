@@ -16,5 +16,6 @@
         <mapping class="com.project.entities.Transact"/>
         <mapping class="com.project.entities.BranchDetails"/>
         <mapping class="com.project.entities.UserCredentials"/>
+        <mapping class="com.project.entities.Payee"/>
     </session-factory>
 </hibernate-configuration>

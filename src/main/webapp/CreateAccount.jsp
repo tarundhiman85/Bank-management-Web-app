@@ -19,6 +19,7 @@
         <div class="col-md-4 offset-md-4">
             <div class="card">
                 <%@include file="message.jsp"%>
+                <%@include file="errorMsg.jsp"%>
                 <div class="card-body px-5">
                     <h4 class="text-center my-3">Create Account</h4>
                     <form action="RegisterServlet" method="post">
@@ -30,8 +31,8 @@
 
                         <div>
                             <label>Password</label>
-                            <label for="password"></label><input name="password" required type="password" class="form-control" id="password" placeholder="Enter Password"><br>
-                            <label for="confirm_password"></label><input name="confirm_password" required type="password" class="form-control" id="confirm_password" placeholder="Confirm Password"><br>
+                            <label for="password"></label><input name="password" required type="password" class="form-control" id="password" placeholder="Enter Password" ><br>
+                            <label for="confirm_password"></label><input name="confirm_password" required type="password" class="form-control" id="confirm_password" placeholder="Confirm Password" ><br>
                         </div>
 
                         <div class="form-group">
@@ -46,7 +47,7 @@
 
                         <div class="form-group">
                             <label for="dob">D.O.B</label>
-                            <input name="dob" required type="date" class="form-control" id="dob" placeholder="Enter your DOB here" aria-describedby="emailHelp">
+                            <input name="dob" required type="date" class="form-control" id="dob" placeholder="Enter your DOB here" onclick="dobValidate();" aria-describedby="emailHelp">
                         </div>
 
                         <div class="form-group">
@@ -115,7 +116,7 @@
                         </div>
                         <a href="login.jsp" class="text-center d-block mb-2">If Already have account Click Here</a>
                         <div class="container text-center">
-                            <button id="register" onclick="verifyPassword();">Register</button>
+                            <button id="register" onclick="verifyPassword(); dobValidate();">Register</button>
                             <button type="reset" id="reset">Reset</button>
                         </div>
                         <input type="hidden" id="hiddenSubmit" name="clickedSubmit" value="no">
