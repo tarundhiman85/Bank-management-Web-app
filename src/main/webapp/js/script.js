@@ -48,3 +48,44 @@ var SameAsAbove = {
 }
 
 Core.start(SameAsAbove);
+
+//--------------------------------------Virtual Keyboard--------------------------------------------
+
+var print = "";
+var t = "";
+var back = false
+var caps = false;
+
+function button_clicked_caps() {
+    if (caps)
+        caps = false;
+    else {
+        caps = true;
+    }
+
+
+}
+
+
+
+
+function button_clicked(character) {
+    if (caps) {
+        print = print + character;
+
+    } else {
+
+        print = print + character.toLowerCase();
+    }
+    var output = document.getElementById("keys_output");
+    output.textContent = print;
+
+
+}
+
+function button_clicked_back() {
+    var temp = "";
+    var output = document.getElementById("keys_output")
+    output.textContent = temp
+    print = "";
+}
