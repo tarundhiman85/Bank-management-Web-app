@@ -20,7 +20,7 @@ public class RDAccount {
     private String registeredDate;
     private boolean isActive=false;
     private String MonthlyDeposit;
-    @ManyToOne(fetch = FetchType.LAZY, cascade = CascadeType.DETACH)
+    @ManyToOne(fetch = FetchType.EAGER, cascade = CascadeType.DETACH)
     @JoinColumn(name = "user_id")
     private Users user;
 

@@ -12,7 +12,7 @@ public class FDAccount {
     private String CurrentROI;
     private String MaturityAmount;
     private String MaturityDate;
-    @ManyToOne(fetch = FetchType.LAZY, cascade = CascadeType.DETACH)
+    @ManyToOne(fetch = FetchType.EAGER, cascade = CascadeType.DETACH)
     @JoinColumn(name = "user_id")
     private Users user;
 

@@ -7,7 +7,7 @@
         <property name="connection.driver_class">com.mysql.jdbc.Driver</property>
         <property name="connection.url">jdbc:mysql://localhost:3306/mybank</property>
         <property name="connection.username">root</property>
-        <property name="connection.password">root</property>
+        <property name="connection.password">8572008222</property>
         <property name="dialect">org.hibernate.dialect.MySQL5Dialect</property>
         <property name="hbm2ddl.auto">update</property>
         <property name="show_sql">true</property>
@@ -16,5 +16,7 @@
         <mapping class="com.project.entities.Transact"/>
         <mapping class="com.project.entities.BranchDetails"/>
         <mapping class="com.project.entities.UserCredentials"/>
+        <mapping class="com.project.entities.FDAccount"/>
+        <mapping class="com.project.entities.RDAccount"/>
     </session-factory>
 </hibernate-configuration>
