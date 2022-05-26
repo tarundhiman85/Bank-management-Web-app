@@ -18,5 +18,6 @@
         <mapping class="com.project.entities.UserCredentials"/>
         <mapping class="com.project.entities.FDAccount"/>
         <mapping class="com.project.entities.RDAccount"/>
+        <mapping class="com.project.entities.Payee"/>
     </session-factory>
 </hibernate-configuration>

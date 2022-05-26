@@ -165,3 +165,23 @@ div#boxs {
     justify-content: center;
     margin-top: 30px;
 }
+.col-sm{
+    padding-top: 5%;
+    text-align: center;
+}
+.Payee-box{
+    font-size: 15px;
+    color: white;
+    padding: 15px;
+    border: 2px solid #72d3f1;
+    background-color: #001F32FF;
+}
+.Payee-box:hover{
+    font-size: 15px;
+    color: #001F32FF;
+    text-decoration: none;
+    padding: 15px;
+    border: 2px solid #72d3f1;
+    background-color: #72d3f1;
+    transition: 0.4s;
+}
