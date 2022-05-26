@@ -55,7 +55,7 @@ input[type="text"]
     padding-left: 30%;
 }
 .btn1{
-  background-color: rgba(37,150,190,0);
+    background-color: rgba(37,150,190,0);
     border: solid 1px #72d3f1;
 }
 .btn2{
@@ -99,7 +99,7 @@ div#boxs {
     background-color: rgba(0, 31, 50, 1);
 }
 .back{
-    background: url("../img/back-night.jpg") no-repeat center center fixed;
+    /*background: url("../img/back-night.jpg") no-repeat center center fixed;*/
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
