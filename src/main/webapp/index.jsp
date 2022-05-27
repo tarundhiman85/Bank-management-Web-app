@@ -27,7 +27,7 @@ To do so, the user has to create a unique user name and password for securely lo
     <div class="text-block">
 
         Welcome to the ABC Bank<br>
-        Check your Account Details Tarun<br>
+        Check your Account Details ANKITA<br>
         Check Your Loan Offers<br>
         Withdraw Money<br>
     </div>
