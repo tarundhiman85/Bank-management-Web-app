@@ -10,6 +10,8 @@
 --%>
 <%
     Users user = (Users) session.getAttribute("current-User");
+    UserDao userDao = new UserDao(FactoryProvider.getFactory());
+    user = userDao.getUserById(user.getUserId());
 %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>

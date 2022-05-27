@@ -27,7 +27,7 @@
                 <input name="password" type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
             </div>
             <div style="margin-bottom: 15px">
-                <a href="register.jsp"  class="text-center d-block mb-2">If Not Registered Click Here</a>
+                <a href="CreateAccount.jsp"  class="text-center d-block mb-2">If Not Registered Click Here</a>
             </div>
             <div class="container text-center">
                 <button type="submit" id="register">Submit</button>

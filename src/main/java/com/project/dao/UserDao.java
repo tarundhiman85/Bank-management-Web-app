@@ -1,14 +1,12 @@
 package com.project.dao;
 
-import com.project.entities.FDAccount;
-import com.project.entities.RDAccount;
-import com.project.entities.Payee;
-import com.project.entities.Users;
+import com.project.entities.*;
 import com.project.helper.FactoryProvider;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.query.Query;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class UserDao {
@@ -236,4 +234,17 @@ public class UserDao {
     }
 
 
+    public List<Transact> getTransactionHistoryList(int userId) {
+        List<Transact> transactList = new ArrayList<>();
+        try {
+            Session session = this.factory.openSession();
+            session.beginTransaction();
+            transactList = session.createQuery("from Transact where user.userId = :userId").setParameter("userId", userId).list();
+            session.getTransaction().commit();
+            session.close();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return transactList;
+    }
 }

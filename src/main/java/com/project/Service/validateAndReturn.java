@@ -26,7 +26,7 @@ public class validateAndReturn {
         catch (Exception e){
             return false;
         }
-        return true;
+        return user != null;
     }
 
     public boolean validateUserMoney(String userName, String balance) {

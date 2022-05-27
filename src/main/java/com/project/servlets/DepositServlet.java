@@ -30,8 +30,8 @@ public class DepositServlet extends HttpServlet {
                 response.sendRedirect("account.jsp");
 
             } else {
-                int currentBalance = Integer.parseInt(user.getBalance());
-                currentBalance += Integer.parseInt(balance);
+                double currentBalance = Double.parseDouble(user.getBalance());
+                currentBalance += Double.parseDouble(balance);
                 user.setBalance((String.valueOf(currentBalance)));
                 session.update(user);
                 tx.commit();

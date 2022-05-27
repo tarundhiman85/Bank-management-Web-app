@@ -19,7 +19,8 @@ public class WithdrawServlet extends HttpServlet {
             int amount=Integer.parseInt(request.getParameter("withdraw_amount"));
             HttpSession session1=request.getSession();
             Users user=(Users) session1.getAttribute("current-User");
-            int avail_balance=Integer.parseInt(user.getBalance());
+            double balance=Double.parseDouble(user.getBalance());
+            int avail_balance=(int)balance;
             if(avail_balance<amount){
              session1.setAttribute("message","Enter amount within range");
              response.sendRedirect("withdraw.jsp");

@@ -1,5 +1,7 @@
 <%@ page import="java.util.List" %>
-<%@ page import="com.project.dao.UserDao" %><%--
+<%@ page import="com.project.dao.UserDao" %>
+<%@ page import="com.project.helper.FactoryProvider" %>
+<%@ page import="com.project.entities.Transact" %><%--
   Created by IntelliJ IDEA.
   User: shubh
   Date: 22-05-2022
@@ -14,12 +16,27 @@
 </head>
 <body class="back">
 <%@include file="navbar.jsp"%>
+<%
+    Users user = (Users) session.getAttribute("current-User");
+    if(user==null){
+%>
+<div class="card1">
+    <h2>You need to Sign in</h2>
+    <a href="login.jsp">Click Here</a>
+</div>
+<%
+    }else{
+%>
 <div class="container-fluid">
     <div class="row al">
         <div class="col-md-6">
             <div class="card mt-3">
                 <div class="card-body">
                     <%@include file="message.jsp"%>
+                    <%
+                        List<Transact> transactList = new UserDao(FactoryProvider.getFactory()).getTransactionHistoryList(user.getUserId());
+                    %>
+
                     <table class="table table-striped table-bordered" style="color:#72d3f1">
                         <thead>
                         <tr>
@@ -32,27 +49,26 @@
                         </tr>
                         </thead>
                         <tbody>
+                        <% for(Transact transact:transactList){ %>
                         <tr>
-                            <td>10001</td>
-                            <td>12345</td>
-                            <td>online</td>
-                            <td>987654321</td>
-                            <td>29th-may-2022</td>
-                            <td>3000</td>
+                            <td><%=transact.gettId()%></td>
+                            <td><%=transact.getReferenceNo()%></td>
+                            <td><%=transact.getTransactionType()%></td>
+                            <td><%=transact.getpAccountNumber()%></td>
+                            <td><%=transact.getTime()%></td>
+                            <td><%=transact.getAmount()%></td>
                         </tr>
-                        <tr>
-                        <td>10002</td>
-                        <td>12346</td>
-                        <td>online</td>
-                        <td>987654322</td>
-                        <td>29th-may-2022</td>
-                        <td>5000</td>
-                        </tr>
+                        <%
+                         }
+                        %>
                         </tbody></table>
                 </div>
             </div>
         </div>
     </div>
 </div>
+<%
+    }
+    %>
 </body>
 </html>

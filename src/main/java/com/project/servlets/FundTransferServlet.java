@@ -49,7 +49,7 @@ public class FundTransferServlet extends HttpServlet
             }
             else
             {
-                session.setAttribute("errorMsg", "Invalid Details of the user");
+                session.setAttribute("errorMsg", "Payee does not exist");
                 response.sendRedirect("FundTransfer.jsp");
             }
 

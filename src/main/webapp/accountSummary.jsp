@@ -14,6 +14,17 @@
 </head>
 <body class="back">
 <%@include file="navbar.jsp"%>
+<%
+    Users user = (Users) session.getAttribute("current-User");
+    if(user==null){
+%>
+<div class="card1">
+    <h2>You need to Sign in</h2>
+    <a href="login.jsp">Click Here</a>
+</div>
+<%
+}else{
+%>
 <div class="container-fluid">
     <div class="row al">
         <div class="col-md-4">
@@ -31,16 +42,10 @@
                         </thead>
                         <tbody>
                         <tr>
-                            <td>5799269058</td>
-                            <td>saving</td>
-                            <td>7000</td>
-                            <td>25th-May-2022</td>
-                        </tr>
-                        <tr>
-                            <td>5799269059</td>
-                            <td>saving</td>
-                            <td>8000</td>
-                            <td>25th-May-2022</td>
+                            <td><%=user.getAccountNo()%></td>
+                            <td><%=user.getAccountType()%></td>
+                            <td><%=user.getBalance()%></td>
+                            <td><%=user.getDob()%></td>
                         </tr>
                         </tbody></table>
                 </div>
@@ -48,5 +53,8 @@
         </div>
     </div>
 </div>
+<%
+}
+%>
 </body>
 </html>

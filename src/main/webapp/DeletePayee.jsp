@@ -26,7 +26,6 @@
                     <%Users user = (Users) session.getAttribute("current-User");
                         List<Payee> payeeList = new UserDao(FactoryProvider.getFactory()).getPayeeList(user.getUserId());
                     %>
-                    <% if(payeeList!=null && payeeList.size()>0){ %>
                     <table class="table table-striped table-bordered">
                         <thead>
                         <tr>
@@ -34,10 +33,10 @@
                             <th>Account Number</th>
                             <th>IFSC Code</th>
                             <th>Activate</th>
-                            <%--                                <th>Delete</th>--%>
                         </tr>
                         </thead>
                         <tbody>
+                        <% if(payeeList!=null && payeeList.size()>0){ %>
                         <% for(Payee payee:payeeList){ %>
                         <tr>
                             <td><%=payee.getpName()%></td>
@@ -52,6 +51,7 @@
                             </td>
                         </tr>
                         <% }
+
                         }%>
                         </tbody>
 

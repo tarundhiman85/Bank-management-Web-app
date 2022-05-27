@@ -89,9 +89,6 @@
               <button type="add" id="reset">Add</button>
 
             </div>
-
-
-
           </form>
         </div>
       </div>
