@@ -123,8 +123,98 @@
                     </form>
                 </div>
             </div>
+
         </div>
     </div>
-</div>
+    <div id="keyboard" >
+
+    <div id="keys_output" class="line">
+    </div>
+
+
+            <div class="line">
+                <button class="sp" onclick="button_clicked('1')">1</button>
+                <button class="sp" onclick="button_clicked('2')">2</button>
+                <button class="sp" onclick="button_clicked('3')">3</button>
+                <button class="sp" onclick="button_clicked('4')">4</button>
+                <button class="sp" onclick="button_clicked('5')">5</button>
+                <button class="sp" onclick="button_clicked('6')">6</button>
+                <button class="sp" onclick="button_clicked('7')">7</button>
+                <button class="sp" onclick="button_clicked('8')">8</button>
+                <button class="sp" onclick="button_clicked('9')">9</button>
+                <button class="sp" onclick="button_clicked('0')">0</button>
+                <button class="sp" onclick="button_clicked('-')">-</button>
+                <button class="sp" onclick="button_clicked('=')">=</button>
+                <button class="sp" onclick="button_clicked('?')">?</button></div>
+
+            <div class="line">
+                <button class="sp" onclick="button_clicked('Q')">Q</button>
+                <button class="sp" onclick="button_clicked('W')">W</button>
+                <button class="sp" onclick="button_clicked('E')">E</button>
+                <button class="sp" onclick="button_clicked('R')">R</button>
+                <button class="sp" onclick="button_clicked('T')">T</button>
+                <button class="sp" onclick="button_clicked('Y')">Y</button>
+                <button class="sp" onclick="button_clicked('U')">U</button>
+                <button class="sp" onclick="button_clicked('I')">I</button>
+                <button class="sp" onclick="button_clicked('O')">O</button>
+                <button class="sp" onclick="button_clicked('P')">P</button>
+                <button class="sp" onclick="button_clicked('{')">{</button>
+                <button class="sp" onclick="button_clicked('}')">}</button>
+                <button class="sp" onclick="button_clicked('|')">|</button>
+            </div>
+            <div class="line">
+                <button class="sp" onclick="button_clicked('Z')">Z</button>
+                <button class="sp" onclick="button_clicked('A')">A</button>
+                <button class="sp" onclick="button_clicked('S')">S</button>
+                <button class="sp" onclick="button_clicked('D')">D</button>
+                <button class="sp" onclick="button_clicked('F')">F</button>
+                <button class="sp" onclick="button_clicked('G')">G</button>
+                <button class="sp" onclick="button_clicked('H')">H</button>
+                <button class="sp" onclick="button_clicked('J')">J</button>
+                <button class="sp" onclick="button_clicked('K')">K</button>
+                <button class="sp" onclick="button_clicked('L')">L</button>
+                <button class="sp" onclick="button_clicked('[')">[</button>
+                <button class="sp" onclick="button_clicked(']')">]</button>
+                <button class="sp" onclick="button_clicked('/')">/</button>
+                <button class="sp" onclick="button_clicked('.')">.</button>
+            </div>
+            <div class="line">
+                <button class="sp" onclick="button_clicked('Z')">Z</button>
+                <button class="sp" onclick="button_clicked('X')">X</button>
+                <button class="sp" onclick="button_clicked('C')">C</button>
+                <button class="sp" onclick="button_clicked('V')">V</button>
+                <button class="sp" onclick="button_clicked('B')">B</button>
+                <button class="sp" onclick="button_clicked('N')">N</button>
+                <button class="sp" onclick="button_clicked('M')">M</button>
+                <button class="sp" onclick="button_clicked('<')"><</button>
+                <button class="sp" onclick="button_clicked('>')">></button>
+                <button class="sp" onclick="button_clicked(';')">;</button>
+                <button class="sp" onclick="button_clicked(':')">:</button>
+                <button class="sp" onclick="button_clicked('=')">=</button>
+        </div>
+        <div class="line">
+            <button class="caps" onclick="button_clicked_caps()">CAPS</button>
+            <button class="sp" onclick="button_clicked('~')">~</button>
+            <button class="sp" onclick="button_clicked('!')">!</button>
+            <button class="sp" onclick="button_clicked('@')">@</button>
+            <button class="sp" onclick="button_clicked('#')">#</button>
+            <button class="sp" onclick="button_clicked('$')">$</button>
+            <button class="sp" onclick="button_clicked('%')">%</button>
+            <button class="sp" onclick="button_clicked('^')">^</button>
+            <button class="sp" onclick="button_clicked('&')">&</button>
+            <button class="sp" onclick="button_clicked('*')">*</button>
+            <button class="sp" onclick="button_clicked('(')">(</button>
+            <button class="sp" onclick="button_clicked(')')">)</button>
+            <button class="sp" onclick="button_clicked('_')">_</button>
+            <button class="sp" onclick="button_clicked('+')">+</button>
+        </div>
+
+        <div id="bott">
+            <button id="all" onclick="button_clicked(' ')"> SPACE</button>
+            <button id="bk" onclick="button_clicked_back()">CLEAR</button>
+
+        </div>
+    </div>
+    </div>
 </body>
 </html>
