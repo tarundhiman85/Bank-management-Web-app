@@ -75,8 +75,8 @@ else{
                         </div>
 
                         <div class="container text-center">
-                            <button id="deposit1">Confirm</button>
-                            <button type="reset" id="reset">Submit</button>
+                            <button id="register">Confirm</button>
+                            <button type="reset" id="reset">Reset</button>
                         </div>
                     </form>
                 </div>

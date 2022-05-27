@@ -22,7 +22,7 @@ else{
 <div class="card2">
 <form id="f1" action="DepositServlet" method="post">
         <h5 style="color: #72d3f1">Enter the amount to add</h5>
-        <input name="balance" id="b1" type="text" placeholder="Enter here">
+        <input name="balance" id="b1" required type="text" placeholder="Enter Amount">
         <br>
         <input type="submit" id="deposit" value="Deposit">
 </form>

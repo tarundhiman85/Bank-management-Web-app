@@ -30,7 +30,7 @@
                 <a href="CreateAccount.jsp"  class="text-center d-block mb-2">If Not Registered Click Here</a>
             </div>
             <div class="container text-center">
-                <button type="submit" id="register">Submit</button>
+                <button type="submit" id="register">Login</button>
                 <button type="reset" id="reset">Reset</button>
             </div>
         </form>

@@ -25,6 +25,7 @@
 }
 input[type="text"]
 {
+    color: #72d3f1;
     background: transparent;
     /*background: rgba(0, 0, 0, 0);*/
     border: none;
@@ -131,11 +132,31 @@ input[type="text"]
     margin-left: 15%;
     font-weight: bold;
 }
+#deposit:hover{
+    background-color: #72d3f1;
+    border: solid 1px #72d3f1;
+    color: #001F32FF;
+    margin-top: 3%;
+    margin-left: 15%;
+    font-weight: bold;
+    transition: 0.4s;
+}
 #deposit1{
     background-color: rgba(37,150,190,0);
     border: solid 1px #72d3f1;
     color: #72d3f1;
+    margin-top: 3%;
+    margin-left: 2%;
     font-weight: bold;
+}
+#deposit1:hover{
+    background-color: #72d3f1;
+    border: solid 1px #72d3f1;
+    color: #001F32FF;
+    margin-top: 3%;
+    margin-left: 2%;
+    font-weight: bold;
+    transition: 0.4s;
 }
 #register{
     background-color: rgba(37,150,190,0);
@@ -196,6 +217,25 @@ input[type="text"]
     font-size: 15px;
     color: #001F32FF;
     text-decoration: none;
+    padding: 15px;
+    border: 2px solid #72d3f1;
+    background-color: #72d3f1;
+    transition: 0.4s;
+}
+.Home-box{
+    font-size: 15px;
+    width: 150px;
+    text-align: center;
+    color: white;
+    padding: 15px;
+    border: 2px solid #72d3f1;
+    background-color: #001F32FF;
+}
+.Home-box:hover{
+    font-size: 15px;
+    width: 150px;
+    text-align: center;
+    color: #001F32FF;
     padding: 15px;
     border: 2px solid #72d3f1;
     background-color: #72d3f1;
