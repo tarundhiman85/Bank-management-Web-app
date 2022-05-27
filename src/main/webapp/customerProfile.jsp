@@ -61,7 +61,7 @@
         <div class="w-100"></div>
 
         <div class="col-sm">
-            <a href="#">
+            <a href="FundTransfer.jsp">
                 <div class="Payee-box">
                     <i class="fa-solid fa-money-bill-transfer" style="font-size:50px"></i><br>
                     <label>Fund Transfer</label>
@@ -69,7 +69,7 @@
             </a>
         </div>
         <div class="col-sm">
-            <a href="#">
+            <a href="Payee.jsp">
                 <div class="Payee-box">
                     <i class="fa-solid fa-money-bill-trend-up" style="font-size:50px"></i><br>
                     <label>Payee</label>
