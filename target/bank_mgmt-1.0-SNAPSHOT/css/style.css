@@ -10,6 +10,9 @@
 .nav-link{
     color: #72d3f1 !important;
 }
+.card {
+    margin-left: 5%;
+}
 .card1 {
     margin-top: 50px;
     margin-left: 30%;
@@ -22,6 +25,7 @@
 }
 input[type="text"]
 {
+    color: #72d3f1;
     background: transparent;
     /*background: rgba(0, 0, 0, 0);*/
     border: none;
@@ -69,7 +73,7 @@ input[type="text"]
 #right{
     font-size: 20px;
 }
-div#boxs {
+#boxs {
     padding: 100px;
     color: #72d3f1;
 }
@@ -77,6 +81,8 @@ div#boxs {
     background-color: rgba(0, 31, 50, 0.01);
     border: #72d3f1 1px solid;
 }
+
+
 .card{
     background-color: rgba(0, 31, 50, 0.5);
     color: #72d3f1;
@@ -104,6 +110,8 @@ div#boxs {
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
+
+
 }
 .log_cursor:hover{
     cursor: hand;
@@ -124,11 +132,31 @@ div#boxs {
     margin-left: 15%;
     font-weight: bold;
 }
+#deposit:hover{
+    background-color: #72d3f1;
+    border: solid 1px #72d3f1;
+    color: #001F32FF;
+    margin-top: 3%;
+    margin-left: 15%;
+    font-weight: bold;
+    transition: 0.4s;
+}
 #deposit1{
     background-color: rgba(37,150,190,0);
     border: solid 1px #72d3f1;
     color: #72d3f1;
+    margin-top: 3%;
+    margin-left: 2%;
     font-weight: bold;
+}
+#deposit1:hover{
+    background-color: #72d3f1;
+    border: solid 1px #72d3f1;
+    color: #001F32FF;
+    margin-top: 3%;
+    margin-left: 2%;
+    font-weight: bold;
+    transition: 0.4s;
 }
 #register{
     background-color: rgba(37,150,190,0);
@@ -160,6 +188,7 @@ div#boxs {
 }
 .card-body{
     max-width: 700px;
+    position: absolute;
 }
 .al{
     justify-content: center;
@@ -193,9 +222,96 @@ div#boxs {
     background-color: #72d3f1;
     transition: 0.4s;
 }
+.Home-box{
+    font-size: 15px;
+    width: 150px;
+    text-align: center;
+    color: white;
+    padding: 15px;
+    border: 2px solid #72d3f1;
+    background-color: #001F32FF;
+}
+.Home-box:hover{
+    font-size: 15px;
+    width: 150px;
+    text-align: center;
+    color: #001F32FF;
+    padding: 15px;
+    border: 2px solid #72d3f1;
+    background-color: #72d3f1;
+    transition: 0.4s;
+}
 @media only screen and (max-width:1140px){
     .navbar navbar-expand-lg navbar-light  bg-transparent navbar-fixed-top{
         flex-direction: column;
     }
 
+}
+#keyboard {
+    margin-left: 920px;
+    margin-top: 20px;
+    position: fixed;
+    diplay:body;
+    background-color: rgba(0, 31, 50, 0.5);
+    display: block;
+    border-style: solid;
+    border-color: #72d3f1;
+}
+#sp {
+    height: 20px;
+    width: 20px;
+    background-color: whitesmoke;
+    color:#72d3f1 ;
+    font-size: 12px;
+    margin: 0.5px;
+}
+button sp {
+       font-size: 0px;
+   }
+
+.line {
+    text-align: center;
+    margin-right:10px;
+}
+
+#keys_output {
+    height: 50px;
+    width: 400px;
+    background-color: whitesmoke;
+    font-size: 18px;
+    margin-left: 15px;
+    margin-top: 15px;
+    /* margin-bottom: 20px; */
+    text-align: center;
+}
+
+#all {
+    height: 25px;
+    background-color: whitesmoke;
+    color: black;
+    width: 70px;
+    margin-left: 20px;
+    font-size: 13px;
+}
+
+#bk {
+    width: 70px;
+    margin-left: 25px;
+    margin-bottom:5px;
+    height: 25px;
+    background-color: whitesmoke;
+    color: black;
+    font-size: 13px;
+}
+
+#bott {
+    margin-top: 10px;
+}
+
+#caps {
+    width: 80px;
+    height: 20px;
+    background-color: white;
+    color: black;
+    font-size: 14px;
 }
