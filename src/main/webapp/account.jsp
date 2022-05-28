@@ -39,9 +39,12 @@
 <div class="card1">
 <%--    <img src="img.jpg" alt="John" style="width:100%">--%>
     <h6>Name: <%=user.getUserName()%></h6>
-    <h6 class="title">Address: <%=user.getUserAddress()%></h6>
-    <h6>Account Type: <%=user.getAccountType()%></h6>
+    <h6>Address: <%=user.getUserAddress()%></h6>
+    <h6>Account Type: <%=user.getAccountType().toUpperCase()%></h6>
     <h6>Balance: <%=user.getBalance()%></h6>
+    <h6>Date of Birth :<%=user.getDob()%></h6>
+    <h6>Email: <%=user.getUserEmail()%></h6>
+    <h6>Phone: <%=user.getMobilePhone()%></h6>
     <a href="deposit.jsp"><button id="deposit1">Add Balance</button></a>
 </div>
 
