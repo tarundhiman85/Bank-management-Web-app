@@ -40,12 +40,12 @@ else{
 
                         <div class="form-group">
                             <label for="phone" >Tenure Of Deposit :</label><br>
-                            <select name="tenure" class="btn1" required>
+                            <select name="tenure" class="btn1" style="background-color: #0f2740" required >
                                 <option value="saving">--Select--</option>
                                 <option value="6">6 Months</option>
                                 <option value="12">12 Months</option>
                                 <option value="18">18 Months</option>
-<%--                                <option value="">24 Months</option>--%>
+<%--                                <option val
 <%--                                <option value="current">30 Months</option>--%>
 <%--                                <option value="current">36 Months</option>--%>
                             </select>
