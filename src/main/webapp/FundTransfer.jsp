@@ -60,14 +60,14 @@ else{
                         </div>
 
                         <div class="form-group">
-                            <label for="PAccount_Number">Payee Account Number</label>
-                            <input name="PAccount_Number" type="text" style="border:1px solid #72d3f1;" class="form-control" id="PAccount_Number" aria-describedby="emailHelp" placeholder="Enter receiver's account number">
+                            <label for="PAccount_Number">Payee Account Number </label>
+                            <input name="PAccount_Number" type="text" style="border:1px solid #72d3f1;background-color: #041d30" class="form-control" id="PAccount_Number" aria-describedby="emailHelp" placeholder="Enter receiver's account number">
                         </div>
 
 
                         <div class="form-group">
                             <label for="amount">Amount</label>
-                            <input name="amount" type="number" class="form-control" id="amount" aria-describedby="emailHelp" placeholder="Enter Amount">
+                            <input name="amount" type="number" class="form-control" style="background-color: #041d30"id="amount" aria-describedby="emailHelp" placeholder="Enter Amount">
                         </div>
 
                         <div class="container text-center">

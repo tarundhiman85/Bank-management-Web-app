@@ -38,7 +38,7 @@ else{
     %>
     <h6>Enter to Withdraw Amount</h6>
         <label>
-            <input name="withdraw_amount" required type="number" class="form-control" placeholder="Enter amount">
+            <input name="withdraw_amount" required type="number" class="form-control" style="background-color: #022c3d"placeholder="Enter amount">
         </label>
         <input id="deposit1" type="submit" value="Withdraw">
 </form>

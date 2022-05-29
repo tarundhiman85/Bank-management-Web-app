@@ -26,22 +26,22 @@
 
                         <div class="form-group">
                             <label for="Account Number">Account Number</label>
-                            <input name="Account_Number" type="text" style="border:1px solid #72d3f1;" class="form-control" id="Account Number" aria-describedby="emailHelp" placeholder="Enter payee's account number">
+                            <input name="Account_Number" type="text"style="border:1px solid #72d3f1;background-color: #041d30"  class="form-control" style="background-color: #041d30"id="Account Number" aria-describedby="emailHelp" placeholder="Enter payee's account number">
                         </div>
 
                         <div class="form-group">
                             <label for="name">Name</label>
-                            <input name="name" type="text" style="border:1px solid #72d3f1;" class="form-control" id="name" aria-describedby="emailHelp" placeholder="Enter payee's name">
+                            <input name="name" type="text" style="border:1px solid #72d3f1;background-color: #041d30" class="form-control" id="name" aria-describedby="emailHelp" placeholder="Enter payee's name">
                         </div>
 
-                        <div class="form-group">
+                        <div class="form-group" style="background-color: #041d30">
                             <label for="ifsc">IFSC Code</label>
-                            <input name="ifsc" type="text" style="border:1px solid #72d3f1;" class="form-control" id="ifsc" aria-describedby="emailHelp" placeholder="Enter your IFSC code">
+                            <input name="ifsc" type="text" style="border:1px solid #72d3f1;background-color: #041d30" class="form-control" id="ifsc" aria-describedby="emailHelp" placeholder="Enter your IFSC code">
                         </div>
 
                         <div class="form-group">
                             <label for="exampleInputPassword1">Password</label>
-                            <input name="password" type="password" class="form-control" id="exampleInputPassword1" placeholder="Enter your password">
+                            <input name="password" type="password" class="form-control"style="background-color: #041d30" id="exampleInputPassword1" placeholder="Enter your password">
                         </div>
 
                         <div class="container text-center">

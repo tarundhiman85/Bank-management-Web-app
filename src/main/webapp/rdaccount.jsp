@@ -35,21 +35,22 @@ else{
 
                         <div class="form-group">
                             <label for="phone" >Deposit Amount :</label>
-                            <input name="deposit_amount" required type="number" class="form-control" id="phone4" placeholder="Enter Deposit Amount" aria-describedby="emailHelp" >
+                            <input name="deposit_amount" required type="number" class="form-control" style="background-color: #041d30"id="phone4" placeholder="Enter Deposit Amount" aria-describedby="emailHelp" style="background-color: cornflowerblue" >
                         </div>
 
                         <div class="form-group">
                             <label for="phone" >Tenure Of Deposit :</label><br>
-                            <select name="tenure" class="btn1" style="background-color: #0f2740"required>
+                            <select name="tenure" class="btn1" style="background-color: #041d30"required>
                                 <option value="saving">--Select--</option>
                                 <option value="6">6 Months</option>
+
                                 <option value="12">12 Months</option>
                                 <option value="18">18 Months</option>
                             </select>
                         </div>
                         <div class="form-group">
                             <label for="phone" >Enter the Monthly Deposit:</label><br>
-                            <select name="monthly_deposit " class="btn1" style="background-color: #0f2740"required>
+                            <select name="monthly_deposit " class="btn1" style="background-color: #041d30"required>
                                 <option value="saving">--Select--</option>
                                 <option value="100">100 Rupees</option>
                                 <option value="500">500 Rupees</option>
