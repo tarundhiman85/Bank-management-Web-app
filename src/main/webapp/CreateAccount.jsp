@@ -10,6 +10,14 @@
 <head>
     <title>Register</title>
     <%@include file="/common_css_js.jsp"%>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <link rel="shortcut icon" href="/assets/favicon.ico">
+    <link rel="stylesheet" href="/assets/dcode.css">
+    <link rel="stylesheet" href="css/Keyboard.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script src="js/Keyboard.js"></script>
 </head>
 <body class="back">
 <%@include file="navbar.jsp"%>
@@ -26,23 +34,23 @@
 
                         <div>
                             <label>Email</label>
-                            <label for="email"></label><input name="email" required type="email" class="form-control" id="email" placeholder="Enter Email Address" aria-describedby="emailHelp"><br>
+                            <label for="email"></label><input name="email" required type="email" class="use-keyboard-input form-control" id="email" placeholder="Enter Email Address" aria-describedby="emailHelp"><br>
                         </div>
 
                         <div>
                             <label>Password</label>
-                            <label for="password"></label><input name="password" required type="password" class="form-control" id="password" placeholder="Enter Password" ><br>
-                            <label for="confirm_password"></label><input name="confirm_password" required type="password" class="form-control" id="confirm_password" placeholder="Confirm Password" ><br>
+                            <label for="password"></label><input name="password" required type="password" class="use-keyboard-input form-control" id="password" placeholder="Enter Password" ><br>
+                            <label for="confirm_password"></label><input name="confirm_password" required type="password" class="use-keyboard-input form-control" id="confirm_password" placeholder="Confirm Password" ><br>
                         </div>
 
                         <div class="form-group">
                             <label for="fullName">Full Name</label>
-                            <input name="fullName" required type="text" style="border:1px solid #72d3f1;" class="form-control" id="fullName" placeholder="Enter your name here" aria-describedby="emailHelp"><br>
+                            <input name="fullName" required type="text" style="border:1px solid #72d3f1;" class="use-keyboard-input form-control" id="fullName" placeholder="Enter your name here" aria-describedby="emailHelp"><br>
                         </div>
 
                         <div class="form-group">
                             <label for="fathername">Fathers Name</label>
-                            <input name="fathers_name" required type="text" style="border:1px solid #72d3f1;" class="form-control" id="fathername" placeholder="Enter your name here" aria-describedby="emailHelp" >
+                            <input name="fathers_name" required type="text" style="border:1px solid #72d3f1;" class="use-keyboard-input form-control" id="fathername" placeholder="Enter your name here" aria-describedby="emailHelp" >
                         </div>
 
                         <div class="form-group">
@@ -61,7 +69,7 @@
 
                         <div class="form-group">
                             <label for="address">Permanent Address</label>
-                            <textarea name="user_address" placeholder="Enter your Permanent Address" class="form-control" id="address">
+                            <textarea name="user_address" placeholder="Enter your Permanent Address" class="use-keyboard-input form-control" id="address">
                            </textarea>
                         </div>
 
@@ -71,22 +79,22 @@
 
                         <div class="form-group">
                             <label>Present Address</label>
-                            <label for="present_address"></label><textarea name="present_address" placeholder="Enter your Present Address" class="form-control" id="present_address">
+                            <label for="present_address"></label><textarea name="present_address" placeholder="Enter your Present Address" class="use-keyboard-input form-control" id="present_address">
                            </textarea>
                         </div>
 
                         <div class="form-group">
                             <label for="panno" >PAN Number</label>
-                            <input name="pan_number" required type="number" class="form-control" id="panno" placeholder="Pan Number" aria-describedby="emailHelp" >
+                            <input name="pan_number" required type="text" class="use-keyboard-input form-control" id="panno" placeholder="Pan Number" aria-describedby="emailHelp" >
                         </div>
 
                         <div class="form-group">
                             <label for="phone" >User Phone</label>
-                            <input name="user_phone" required type="number" class="form-control" id="phone" placeholder="Enter your phone" aria-describedby="emailHelp" >
+                            <input name="user_phone" required type="number" class="use-keyboard-input form-control" id="phone" placeholder="Enter your phone" aria-describedby="emailHelp" >
                         </div>
                         <div class="form-group">
                             <label for="phone" >Landline Number</label>
-                            <input name="LNumber" required type="number" class="form-control" id="phone2" placeholder="Enter your Landline Number else -1" aria-describedby="emailHelp" >
+                            <input name="LNumber" required type="number" class="use-keyboard-input form-control" id="phone2" placeholder="Enter your Landline Number else -1" aria-describedby="emailHelp" >
                         </div>
 
                         <div class="form-group">
@@ -96,6 +104,8 @@
                             <option value="current">Current</option>
                         </select>
                         </div>
+
+
 
                         <div class="form-group">
                             <label>Select Branch</label>
@@ -111,7 +121,7 @@
 
                         <div class="form-group">
                             <label>Opening Balance</label>
-                            <label for="balance"></label><input name="opening_balance" class="form-control" required type="number" min="5000" id="balance" placeholder="Enter Amount">
+                            <label for="balance"></label><input name="opening_balance" class="use-keyboard-input form-control" required type="number" min="5000" id="balance" placeholder="Enter Amount">
                             <small id="emailHelp" style="color:white" class="form-text">Minimum opening amount should be 5000.</small>
                         </div>
                         <a href="login.jsp" class="text-center d-block mb-2">If Already have account Click Here</a>
@@ -126,95 +136,6 @@
 
         </div>
     </div>
-    <div id="keyboard" >
-
-    <div id="keys_output" class="line">
-    </div>
-
-
-            <div class="line">
-                <button class="sp" onclick="button_clicked('1')">1</button>
-                <button class="sp" onclick="button_clicked('2')">2</button>
-                <button class="sp" onclick="button_clicked('3')">3</button>
-                <button class="sp" onclick="button_clicked('4')">4</button>
-                <button class="sp" onclick="button_clicked('5')">5</button>
-                <button class="sp" onclick="button_clicked('6')">6</button>
-                <button class="sp" onclick="button_clicked('7')">7</button>
-                <button class="sp" onclick="button_clicked('8')">8</button>
-                <button class="sp" onclick="button_clicked('9')">9</button>
-                <button class="sp" onclick="button_clicked('0')">0</button>
-                <button class="sp" onclick="button_clicked('-')">-</button>
-                <button class="sp" onclick="button_clicked('=')">=</button>
-                <button class="sp" onclick="button_clicked('?')">?</button></div>
-
-            <div class="line">
-                <button class="sp" onclick="button_clicked('Q')">Q</button>
-                <button class="sp" onclick="button_clicked('W')">W</button>
-                <button class="sp" onclick="button_clicked('E')">E</button>
-                <button class="sp" onclick="button_clicked('R')">R</button>
-                <button class="sp" onclick="button_clicked('T')">T</button>
-                <button class="sp" onclick="button_clicked('Y')">Y</button>
-                <button class="sp" onclick="button_clicked('U')">U</button>
-                <button class="sp" onclick="button_clicked('I')">I</button>
-                <button class="sp" onclick="button_clicked('O')">O</button>
-                <button class="sp" onclick="button_clicked('P')">P</button>
-                <button class="sp" onclick="button_clicked('{')">{</button>
-                <button class="sp" onclick="button_clicked('}')">}</button>
-                <button class="sp" onclick="button_clicked('|')">|</button>
-            </div>
-            <div class="line">
-                <button class="sp" onclick="button_clicked('Z')">Z</button>
-                <button class="sp" onclick="button_clicked('A')">A</button>
-                <button class="sp" onclick="button_clicked('S')">S</button>
-                <button class="sp" onclick="button_clicked('D')">D</button>
-                <button class="sp" onclick="button_clicked('F')">F</button>
-                <button class="sp" onclick="button_clicked('G')">G</button>
-                <button class="sp" onclick="button_clicked('H')">H</button>
-                <button class="sp" onclick="button_clicked('J')">J</button>
-                <button class="sp" onclick="button_clicked('K')">K</button>
-                <button class="sp" onclick="button_clicked('L')">L</button>
-                <button class="sp" onclick="button_clicked('[')">[</button>
-                <button class="sp" onclick="button_clicked(']')">]</button>
-                <button class="sp" onclick="button_clicked('/')">/</button>
-                <button class="sp" onclick="button_clicked('.')">.</button>
-            </div>
-            <div class="line">
-                <button class="sp" onclick="button_clicked('Z')">Z</button>
-                <button class="sp" onclick="button_clicked('X')">X</button>
-                <button class="sp" onclick="button_clicked('C')">C</button>
-                <button class="sp" onclick="button_clicked('V')">V</button>
-                <button class="sp" onclick="button_clicked('B')">B</button>
-                <button class="sp" onclick="button_clicked('N')">N</button>
-                <button class="sp" onclick="button_clicked('M')">M</button>
-                <button class="sp" onclick="button_clicked('<')"><</button>
-                <button class="sp" onclick="button_clicked('>')">></button>
-                <button class="sp" onclick="button_clicked(';')">;</button>
-                <button class="sp" onclick="button_clicked(':')">:</button>
-                <button class="sp" onclick="button_clicked('=')">=</button>
-        </div>
-        <div class="line">
-            <button class="caps" onclick="button_clicked_caps()">CAPS</button>
-            <button class="sp" onclick="button_clicked('~')">~</button>
-            <button class="sp" onclick="button_clicked('!')">!</button>
-            <button class="sp" onclick="button_clicked('@')">@</button>
-            <button class="sp" onclick="button_clicked('#')">#</button>
-            <button class="sp" onclick="button_clicked('$')">$</button>
-            <button class="sp" onclick="button_clicked('%')">%</button>
-            <button class="sp" onclick="button_clicked('^')">^</button>
-            <button class="sp" onclick="button_clicked('&')">&</button>
-            <button class="sp" onclick="button_clicked('*')">*</button>
-            <button class="sp" onclick="button_clicked('(')">(</button>
-            <button class="sp" onclick="button_clicked(')')">)</button>
-            <button class="sp" onclick="button_clicked('_')">_</button>
-            <button class="sp" onclick="button_clicked('+')">+</button>
-        </div>
-
-        <div id="bott">
-            <button id="all" onclick="button_clicked(' ')"> SPACE</button>
-            <button id="bk" onclick="button_clicked_back()">CLEAR</button>
-
-        </div>
-    </div>
-    </div>
+</div>
 </body>
 </html>
