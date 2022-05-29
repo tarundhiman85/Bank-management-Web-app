@@ -26,33 +26,33 @@
 
                         <div>
                             <label>Email</label>
-                            <label for="email"></label><input name="email" required type="email" class="form-control" id="email" placeholder="Enter Email Address" aria-describedby="emailHelp"><br>
+                            <label for="email"></label><input name="email" required type="email" class="form-control" style="background-color: #041d30" id="email" placeholder="Enter Email Address" aria-describedby="emailHelp"><br>
                         </div>
 
                         <div>
                             <label>Password</label>
-                            <label for="password"></label><input name="password" required type="password" class="form-control" id="password" placeholder="Enter Password" ><br>
-                            <label for="confirm_password"></label><input name="confirm_password" required type="password" class="form-control" id="confirm_password" placeholder="Confirm Password" ><br>
+                            <label for="password"></label><input name="password" required type="password" class="form-control" style="background-color: #041d30" id="password" placeholder="Enter Password" ><br>
+                            <label for="confirm_password"></label><input name="confirm_password" required type="password" class="form-control"style="background-color:#041d30" id="confirm_password" placeholder="Confirm Password" ><br>
                         </div>
 
                         <div class="form-group">
                             <label for="fullName">Full Name</label>
-                            <input name="fullName" required type="text" style="border:1px solid #72d3f1;" class="form-control" id="fullName" placeholder="Enter your name here" aria-describedby="emailHelp"><br>
+                            <input name="fullName" required type="text" style="border:1px solid #72d3f1;background-color: #041d30" class="form-control" id="fullName" placeholder="Enter your name here" aria-describedby="emailHelp"><br>
                         </div>
 
                         <div class="form-group">
                             <label for="fathername">Fathers Name</label>
-                            <input name="fathers_name" required type="text" style="border:1px solid #72d3f1;" class="form-control" id="fathername" placeholder="Enter your name here" aria-describedby="emailHelp" >
+                            <input name="fathers_name" required type="text" style="border:1px solid #72d3f1;background-color: #041d30" class="form-control" id="fathername" placeholder="Enter your name here" aria-describedby="emailHelp" >
                         </div>
 
                         <div class="form-group">
                             <label for="dob">D.O.B</label>
-                            <input name="dob" required type="date" class="form-control" id="dob" placeholder="Enter your DOB here" onclick="dobValidate();" aria-describedby="emailHelp">
+                            <input name="dob" required type="date" class="form-control"style="background-color: #041d30" id="dob" placeholder="Enter your DOB here" onclick="dobValidate();" aria-describedby="emailHelp">
                         </div>
 
                         <div class="form-group">
                             <label for="gender">Gender</label>
-                            <select name="gender" id="gender" required class="form-control">
+                            <select name="gender" id="gender" required class="form-control"style="background-color: #041d30">
                                 <option value="Male">Male</option>
                                 <option value="Female">Female</option>
                                 <option value="Others">Others</option>
@@ -61,7 +61,7 @@
 
                         <div class="form-group">
                             <label for="address">Permanent Address</label>
-                            <textarea name="user_address" placeholder="Enter your Permanent Address" class="form-control" id="address">
+                            <textarea name="user_address" placeholder="Enter your Permanent Address" class="form-control"style="background-color: #041d30" id="address">
                            </textarea>
                         </div>
 
@@ -71,27 +71,27 @@
 
                         <div class="form-group">
                             <label>Present Address</label>
-                            <label for="present_address"></label><textarea name="present_address" placeholder="Enter your Present Address" class="form-control" id="present_address">
+                            <label for="present_address"></label><textarea name="present_address" placeholder="Enter your Present Address" class="form-control"style="background-color: #041d30" id="present_address">
                            </textarea>
                         </div>
 
                         <div class="form-group">
                             <label for="panno" >PAN Number</label>
-                            <input name="pan_number" required type="number" class="form-control" id="panno" placeholder="Pan Number" aria-describedby="emailHelp" >
+                            <input name="pan_number" required type="number" class="form-control" style="background-color: #041d30" id="panno" placeholder="Pan Number" aria-describedby="emailHelp" >
                         </div>
 
                         <div class="form-group">
                             <label for="phone" >User Phone</label>
-                            <input name="user_phone" required type="number" class="form-control" id="phone" placeholder="Enter your phone" aria-describedby="emailHelp" >
+                            <input name="user_phone" required type="number" class="form-control"style="background-color: #041d30" id="phone" placeholder="Enter your phone" aria-describedby="emailHelp" >
                         </div>
                         <div class="form-group">
                             <label for="phone" >Landline Number</label>
-                            <input name="LNumber" required type="number" class="form-control" id="phone2" placeholder="Enter your Landline Number else -1" aria-describedby="emailHelp" >
+                            <input name="LNumber" required type="number" class="form-control"style="background-color: #041d30" id="phone2" placeholder="Enter your Landline Number else -1" aria-describedby="emailHelp" >
                         </div>
 
                         <div class="form-group">
                             <label>Type of Account &nbsp</label>
-                            <label for="account_type"></label><select name="account_type" id="account_type" required class="form-control">
+                            <label for="account_type"></label><select name="account_type" id="account_type" required class="form-control"style="background-color: #041d30">
                             <option value="saving">Saving</option>
                             <option value="current">Current</option>
                         </select>
@@ -99,7 +99,7 @@
 
                         <div class="form-group">
                             <label>Select Branch</label>
-                            <label for="branch"></label><select name="branch" id="branch" required class="form-control">
+                            <label for="branch"></label><select name="branch" id="branch" required class="form-control"style="background-color: #041d30">
                             <option value="Ahmadabad">Ahmadabad</option>
                             <option value="Bangalore">Bangalore</option>
                             <option value="Chandigarh">Chandigarh</option>
@@ -111,7 +111,7 @@
 
                         <div class="form-group">
                             <label>Opening Balance</label>
-                            <label for="balance"></label><input name="opening_balance" class="form-control" required type="number" min="5000" id="balance" placeholder="Enter Amount">
+                            <label for="balance"></label><input name="opening_balance" class="form-control"style="background-color: #041d30" required type="number" min="5000" id="balance" placeholder="Enter Amount">
                             <small id="emailHelp" style="color:white" class="form-text">Minimum opening amount should be 5000.</small>
                         </div>
                         <a href="login.jsp" class="text-center d-block mb-2">If Already have account Click Here</a>
