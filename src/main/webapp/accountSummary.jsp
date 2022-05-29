@@ -31,7 +31,7 @@
             <div class="card mt-3">
                 <div class="card-body">
                     <%@include file="message.jsp"%>
-                    <table class="table table-striped table-bordered" style="color:#72d3f1">
+                    <table class="table table-striped table-bordered" style="background-color:#041d30;color: #72d3f1 ">
                         <thead>
                         <tr>
                             <th>Account Number</th>
