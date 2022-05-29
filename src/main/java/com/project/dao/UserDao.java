@@ -247,4 +247,22 @@ public class UserDao {
         }
         return transactList;
     }
+
+    public boolean validateUserRegistrationEmail(String userEmail) {
+        String q = "From Users where userEmail=:e";
+        Session session = this.factory.openSession();
+        Query qu = session.createQuery(q);
+        qu.setParameter("e", userEmail);
+        if (qu.uniqueResult() == null) return true;
+        return false;
+    }
+
+    public boolean validateUserRegistrationUserName(String userName) {
+        String q = "From Users where userName=:e";
+        Session session = this.factory.openSession();
+        Query qu = session.createQuery(q);
+        qu.setParameter("e", userName);
+        if (qu.uniqueResult() == null) return true;
+        return false;
+    }
 }

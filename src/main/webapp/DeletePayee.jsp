@@ -26,7 +26,7 @@
                     <%Users user = (Users) session.getAttribute("current-User");
                         List<Payee> payeeList = new UserDao(FactoryProvider.getFactory()).getPayeeList(user.getUserId());
                     %>
-                    <table class="table table-striped table-bordered">
+                    <table class="table table-striped table-bordered" style="color:#72d3f1">
                         <thead>
                         <tr>
                             <th>Payee Name</th>

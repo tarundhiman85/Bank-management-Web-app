@@ -37,13 +37,13 @@
                             <th>Account Number</th>
                             <th>Account Type</th>
                             <th>Balance</th>
-                            <th>Date</th>
+                            <th>Date of Birth</th>
                         </tr>
                         </thead>
                         <tbody>
                         <tr>
                             <td><%=user.getAccountNo()%></td>
-                            <td><%=user.getAccountType()%></td>
+                            <td><%=user.getAccountType().toUpperCase()%></td>
                             <td><%=user.getBalance()%></td>
                             <td><%=user.getDob()%></td>
                         </tr>

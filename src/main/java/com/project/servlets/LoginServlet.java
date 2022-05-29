@@ -28,13 +28,12 @@ public class LoginServlet extends HttpServlet {
                 out.println("<h1>Invalid Details</h1>");
                 httpSession.setAttribute("message", "Invalid User Try Again");
                 response.sendRedirect("login.jsp");
-                return;
             }
             else{
                 //user exists
                 //then redirect to page and display information
                 httpSession.setAttribute("current-User", user);
-                response.sendRedirect("account.jsp");
+                response.sendRedirect("customerProfile.jsp");
             }
         }
         catch (Exception e){

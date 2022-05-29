@@ -1,5 +1,6 @@
 package com.project.servlets;
 
+import com.project.dao.UserDao;
 import com.project.entities.BranchDetails;
 import com.project.entities.UserCredentials;
 import com.project.entities.Users;
@@ -44,6 +45,7 @@ public class RegisterServlet extends HttpServlet {
                 String clickedSubmit = request.getParameter("clickedSubmit");
                 //validation
                 HttpSession httpSession=request.getSession();
+                UserDao userDao=new UserDao(FactoryProvider.getFactory());
                 if(userName==null){
                     httpSession.setAttribute("message", "User Name cannot be null");
                     response.sendRedirect("CreateAccount.jsp");
@@ -57,7 +59,16 @@ public class RegisterServlet extends HttpServlet {
                 if(Integer.parseInt(balance)<5000){
                     httpSession.setAttribute("message", "Opening Balance should be greater than 5000");
                     response.sendRedirect("CreateAccount.jsp");
+                    return;
 
+                }
+                if(!userDao.validateUserRegistrationEmail(userEmail)){
+                    httpSession.setAttribute("message","This email is already registered with us choose another");
+                    response.sendRedirect("CreateAccount.jsp");
+                }
+                if(!userDao.validateUserRegistrationUserName(userName)){
+                    httpSession.setAttribute("message","This UserName is already available choose another");
+                    response.sendRedirect("CreateAccount.jsp");
                 }
                 else{
                     //creating branch data
