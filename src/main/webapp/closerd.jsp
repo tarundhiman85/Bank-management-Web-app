@@ -63,7 +63,6 @@ else{
             <input type="hidden" name="close" value="rd">
             <div class="container text-center">
               <button type="submit" id="register">Click to Close RD</button>
-              <button type="reset" id="reset">Reset</button>
             </div>
           </form>
         </div>

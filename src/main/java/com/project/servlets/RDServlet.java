@@ -19,13 +19,7 @@ public class RDServlet extends HttpServlet {
             String tenureOfDeposit = request.getParameter("tenure");
             String monthlyDeposit = request.getParameter("monthly_deposit");
             String interestRate = "6.5";
-            //now calculate the simple interest
-            double simpleInterest = Double.parseDouble(depositAmount)  * (Double.parseDouble(interestRate) / 100) * (Double.parseDouble(tenureOfDeposit) / 12);
-            //now calculate the total amount
-            double totalAmount = Double.parseDouble(depositAmount) + simpleInterest;
-            //convert into string
-            String totalAmountStr = String.valueOf(totalAmount);
-            //from the tenure of months from today, calculate the date of maturity
+
             String dateOfMaturity = "";
             //get the current date from date class
             java.util.Date date = new java.util.Date();
@@ -41,7 +35,7 @@ public class RDServlet extends HttpServlet {
             rdAccount.setDepositAmount(depositAmount);
             rdAccount.setTenureOfDeposit(tenureOfDeposit);
             rdAccount.setCurrentROI(interestRate);
-            rdAccount.setMaturityAmount(totalAmountStr);
+            rdAccount.setMaturityAmount(depositAmount);
             rdAccount.setMaturityDate(dateOfMaturity);
             rdAccount.setMonthlyDeposit(monthlyDeposit);
             //get the current user from session
@@ -53,7 +47,7 @@ public class RDServlet extends HttpServlet {
             //save the RD details
             boolean f=savingMethods.saveRDAccount(rdAccount);
             if(f){
-                session.setAttribute("message","RD Account Created Successfully"+"->Maturity Amount is "+totalAmountStr+"->Maturity Date is "+dateOfMaturity);
+                session.setAttribute("message","RD Account Created Successfully"+"->Maturity Date is "+dateOfMaturity);
                 response.sendRedirect("rdaccount.jsp");
             }
             else{

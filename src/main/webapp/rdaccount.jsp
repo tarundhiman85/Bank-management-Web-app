@@ -30,7 +30,6 @@ else{
 
                         <div class="form-group">
                             <%--@declare id="kal"--%><label for="kal" >Your Account No: <%=user.getAccountNo()%></label>
-                            <%--                            <input name="account_no" required type="number" class="form-control" id="kal" placeholder="Enter Account Number">--%>
                         </div>
 
                         <div class="form-group">
@@ -41,7 +40,6 @@ else{
                         <div class="form-group">
                             <label for="phone" >Tenure Of Deposit :</label><br>
                             <select name="tenure" class="btn1" required>
-                                <option value="saving">--Select--</option>
                                 <option value="6">6 Months</option>
                                 <option value="12">12 Months</option>
                                 <option value="18">18 Months</option>
@@ -49,8 +47,7 @@ else{
                         </div>
                         <div class="form-group">
                             <label for="phone" >Enter the Monthly Deposit:</label><br>
-                            <select name="monthly_deposit " class="btn1" required>
-                                <option value="saving">--Select--</option>
+                            <select name="monthly_deposit" class="btn1" required>
                                 <option value="100">100 Rupees</option>
                                 <option value="500">500 Rupees</option>
                                 <option value="1000">1000 Rupees</option>
@@ -66,7 +63,6 @@ else{
 
                         <div class="form-group">
                             <%--@declare id="phone"--%><label for="phone" >Maturity Amount  will be Calculated after Confirmation</label>
-                            <%--                            <input name="user_phone" required type="number" class="form-control" id="phone1" placeholder="Enter Maturity Amount" >--%>
                         </div>
 
                         <div class="form-group">

@@ -6,7 +6,11 @@ import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.query.Query;
 
+import java.text.DateFormat;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 public class UserDao {
@@ -119,9 +123,16 @@ public class UserDao {
         return rdAccount;
     }
 
-    public boolean updateRDAccount(RDAccount rd) {
+    public boolean updateRDAccount(RDAccount rd) throws ParseException {
         boolean result = false;
-        try {
+        try{
+        String nextDate = rd.getNextDate();
+        //update the date also to next month
+        DateFormat formatter = new SimpleDateFormat("E MMM dd HH:mm:ss Z yyyy");
+        Date date = formatter.parse(nextDate);
+        date.setMonth(date.getMonth() + 1);
+        nextDate = date.toString();
+        rd.setNextDate(nextDate);
             Session session = this.factory.openSession();
             session.beginTransaction();
             session.update(rd);
@@ -153,7 +164,7 @@ public class UserDao {
     public boolean removeFDAccount(FDAccount fd) {
         //call the method increase the balance of the user by giving the deposit amount of fd account
         Users user = fd.getUser();
-        increaseBalancefd(user,fd.getDepositAmount(),fd);
+        increaseBalancefd(user,fd.getMaturityAmount(),fd);
         boolean result = false;
         try {
             Session session = this.factory.openSession();
@@ -173,7 +184,7 @@ public class UserDao {
     public boolean removeRDAccount(RDAccount rd) {
         //call the method increase the balance of the user by giving the deposit amount of rd account
         Users user = rd.getUser();
-        increaseBalancerd(user,rd.getDepositAmount(), rd);
+        increaseBalancerd(user,rd.getMaturityAmount(), rd);
         boolean result = false;
         try {
             Session session = this.factory.openSession();

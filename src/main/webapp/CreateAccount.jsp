@@ -26,9 +26,9 @@
     <div class="row mt-5">
         <div class="col-md-4 offset-md-4">
             <div class="card">
-                <%@include file="message.jsp"%>
-                <%@include file="errorMsg.jsp"%>
                 <div class="card-body px-5">
+                    <%@include file="message.jsp"%>
+                    <%@include file="errorMsg.jsp"%>
                     <h4 class="text-center my-3">Create Account</h4>
                     <form action="RegisterServlet" method="post">
 
@@ -84,8 +84,8 @@
                         </div>
 
                         <div class="form-group">
-                            <label for="panno" >PAN Number</label>
-                            <input name="pan_number" required type="text" class="use-keyboard-input form-control" id="panno" placeholder="Pan Number" aria-describedby="emailHelp" >
+                            <label for="pan_no" >PAN Number</label>
+                            <input name="pan_number1" required type="text" class="use-keyboard-input form-control" id="pan_no" placeholder="PAN Number" aria-describedby="emailHelp" >
                         </div>
 
                         <div class="form-group">

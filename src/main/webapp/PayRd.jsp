@@ -49,16 +49,19 @@ else
                             <%--@declare id="exampleinputemail1"--%><label for="exampleInputEmail1">Your Account Number is: <%=user.getAccountNo()%></label>
                         </div>
                         <div class="form-group">
-                            <%--@declare id="exampleinputpassword1"--%><label for="exampleInputPassword1">In Your RD the Deposited Amount is: <%=rdAccount.getDepositAmount()%></label>
-<%--                            <input name="password" type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">--%>
+                         <%--@declare id="exampleinputpassword1"--%><label for="exampleInputPassword1">In Your RD the Amount is: <%=rdAccount.getMaturityAmount()%></label>
                         </div>
                         <div class="form-group">
-                            <%--@declare id="exampleinputpassword1"--%><label for="exampleInputPassword1">In Your Rd the Monthly deposit is: <%=rdAccount.getMonthlyDeposit()%></label>
-<%--                            <input name="password" type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">--%>
+                          <label for="exampleInputPassword1">In Your Rd the Monthly deposit is: <%=rdAccount.getMonthlyDeposit()%></label>
+                        </div>
+                        <div class="form-group">
+                          <label for="exampleInputPassword1">In Your Rd the Next date is: <%=rdAccount.getNextDate()%></label>
+                        </div>
+                        <div class="form-group">
+                          <label for="exampleInputPassword1">In Your Rd the Maturity date is: <%=rdAccount.getMaturityDate()%></label>
                         </div>
                         <div class="container text-center">
                             <button type="submit" id="register">Click to Pay RD</button>
-                            <button type="reset" id="reset">Reset</button>
                         </div>
                     </form>
                 </div>

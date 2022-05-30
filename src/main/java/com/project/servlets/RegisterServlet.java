@@ -39,7 +39,7 @@ public class RegisterServlet extends HttpServlet {
                 //get father name
                 String fatherName=request.getParameter("fathers_name");
                 //get pan number
-                String panNumber=request.getParameter("pan_number");
+                String panNumber=request.getParameter("pan_number1");
                 //get balance
                 String balance=request.getParameter("opening_balance");
                 String clickedSubmit = request.getParameter("clickedSubmit");
