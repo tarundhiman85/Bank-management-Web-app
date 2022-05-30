@@ -37,7 +37,7 @@ public class FundTransferServlet extends HttpServlet
                         transaction.setTransactionType("Fund Transfer");
                         transaction.setUser(user);
                         new SavingMethods().saveTransaction(transaction);
-                        session.setAttribute("message","Money Transferred Successfully "+transaction.getReferenceNo());
+                        session.setAttribute("message","Money Transferred Successfully Reference Number is: "+transaction.getReferenceNo());
                         response.sendRedirect("FundTransfer.jsp");
                     }
                     else

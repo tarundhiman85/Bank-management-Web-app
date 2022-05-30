@@ -39,7 +39,7 @@ else{
 
                         <div class="form-group">
                             <label for="phone" >Tenure Of Deposit :</label><br>
-                            <select name="tenure" class="btn1" required>
+                            <select name="tenure" class="btn1" style="background-color: #041d30; color: #72d3f1" required>
                                 <option value="6">6 Months</option>
                                 <option value="12">12 Months</option>
                                 <option value="18">18 Months</option>
@@ -47,7 +47,7 @@ else{
                         </div>
                         <div class="form-group">
                             <label for="phone" >Enter the Monthly Deposit:</label><br>
-                            <select name="monthly_deposit" class="btn1" required>
+                            <select name="monthly_deposit" class="btn1" required style="background-color: #041d30; color: #72d3f1">
                                 <option value="100">100 Rupees</option>
                                 <option value="500">500 Rupees</option>
                                 <option value="1000">1000 Rupees</option>
