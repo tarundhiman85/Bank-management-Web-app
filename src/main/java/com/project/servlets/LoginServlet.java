@@ -1,9 +1,9 @@
 package com.project.servlets;
 
-import com.project.dao.UserDao;
+
 import com.project.entities.Users;
 import com.project.helper.FactoryProvider;
-
+import com.project.dao.*;
 import javax.servlet.*;
 import javax.servlet.http.*;
 import javax.servlet.annotation.*;
@@ -33,7 +33,7 @@ public class LoginServlet extends HttpServlet {
                 //then redirect to page and display information
                 user.setLoginStatus("true");
                 httpSession.setAttribute("current-User", user);
-                response.sendRedirect("customerProfile.jsp");
+                response.sendRedirect("index.jsp");
             }
         }
         catch (Exception e){

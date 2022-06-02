@@ -1,11 +1,11 @@
 package com.project.servlets;
 
-import com.project.dao.UserDao;
+
 import com.project.entities.FDAccount;
 import com.project.entities.RDAccount;
 import com.project.entities.Users;
 import com.project.helper.FactoryProvider;
-
+import com.project.dao.*;
 import javax.servlet.*;
 import javax.servlet.http.*;
 import javax.servlet.annotation.*;

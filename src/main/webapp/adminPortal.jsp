@@ -1,25 +1,22 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: akshay
-  Date: 13-05-2022
-  Time: 20:46
-  To change this template use File | Settings | File Templates.
---%>
+<%@ page import="com.project.helper.FactoryProvider" %>
+<%@ page import="java.util.List" %>
+<%@ page import="com.project.dao.*" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<!DOCTYPE html>
-<html lang="en">
-
+<html>
 <head>
     <meta charset="UTF-8">
     <%@include file="/common_css_js.jsp"%>
-    <title>Customer Portal</title>
+    <title>Admin Portal</title>
 </head>
-
 <body class="back">
 <%@include file="navbar.jsp"%>
 <div class="container">
+    <%
+         UserDao ud=new UserDao(FactoryProvider.getFactory());
+         List<Users> users=ud.getAllUsers();
+    %>
     <h3  style="text-align: center; color: #72d3f1; padding-top: 5%">
-        Customer Portal
+        Admin Portal
     </h3>
     <div class="row" >
         <div class="col-sm">
@@ -51,18 +48,35 @@
         </div>
         <div class="w-100"></div>
         <div class="col-sm">
-            <a href="account.jsp">
                 <div class="Payee-box">
-                    <i class="fa fa-user-circle-o" style="font-size:50px"></i><br>
-                    <label>View Account</label>
+                    <i class="fa-solid fa-users" style="font-size:50px"></i><br>
+                    <label>Number of Users: <%=users.size()-1%></label>
+                </div>
+        </div>
+        <div class="col-sm">
+            <a href="CreateAccount.jsp">
+                <div class="Payee-box">
+                    <i class="fa-solid fa-user-plus" style="font-size:50px"></i><br>
+                    <label>Add User</label>
                 </div>
             </a>
         </div>
+
+
         <div class="col-sm">
             <a href="editProfile.jsp">
                 <div class="Payee-box">
                     <i class="fa-solid fa-user-pen" style="font-size:50px"></i><br>
                     <label>Edit Profile</label>
+                </div>
+            </a>
+        </div>
+        <div class="w-100"></div>
+        <div class="col-sm">
+            <a href="account.jsp">
+                <div class="Payee-box">
+                    <i class="fa-solid fa-user-shield" style="font-size:50px"></i><br>
+                    <label>View Account</label>
                 </div>
             </a>
         </div>
@@ -85,6 +99,14 @@
         <div class="w-100"></div>
 
         <div class="col-sm">
+            <a href="viewUsers.jsp">
+                <div class="Payee-box">
+                    <i class="fa-solid fa-users-rectangle" style="font-size:50px"></i><br>
+                    <label>View Users</label>
+                </div>
+            </a>
+        </div>
+        <div class="col-sm">
             <a href="withdraw.jsp">
                 <div class="Payee-box">
                     <i class="fa-solid fa-money-check-dollar" style="font-size:50px"></i><br>
@@ -100,18 +122,9 @@
                 </div>
             </a>
         </div>
-        <div class="col-sm">
-            <a href="loan.jsp">
-                <div class="Payee-box">
-                    <i class="fa-solid fa-piggy-bank" style="font-size:50px"></i><br>
-                    <label>Loan Offers</label>
-                </div>
-            </a>
-        </div>
-
     </div>
+
 </div>
 <%@include file="common_modals.jsp"%>
 </body>
-
 </html>

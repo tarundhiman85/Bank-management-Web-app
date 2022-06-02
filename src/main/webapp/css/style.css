@@ -212,6 +212,7 @@ input[type="text"]
     padding: 15px;
     border: 2px solid #72d3f1;
     background-color: #001F32FF;
+    height: 7rem;
 }
 .Payee-box:hover{
     font-size: 15px;

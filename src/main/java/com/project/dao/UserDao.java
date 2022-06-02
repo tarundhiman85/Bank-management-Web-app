@@ -72,6 +72,21 @@ public class UserDao {
         }
         return payee;
     }
+    public List<Users> getAllUsers(){
+        List<Users> users = new ArrayList<>();
+        try {
+            //validation if the user exists
+            Session session = this.factory.openSession();
+            String q = "from Users";
+            Query query = (Query) session.createQuery(q);
+            users = query.list();
+            session.close();
+        }
+        catch (Exception e){
+            e.printStackTrace();
+        }
+        return users;
+    }
     public Payee getPayee(String AccountNumber, String PayeeName, String IfscCode){
         Payee payee = null;
         try {

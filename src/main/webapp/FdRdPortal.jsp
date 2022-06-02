@@ -57,7 +57,6 @@
             </a>
         </div>
 
-        <div class="w-100"></div>
 
         <div class="col-sm">
             <a href="closerd.jsp">

@@ -24,35 +24,14 @@
     <div class="collapse navbar-collapse">
         <ul class="navbar-nav">
             <li class="nav-item">
-                <a class="nav-link" href="deposit.jsp">Deposit Funds</a>
-            </li>
-        </ul>
-    </div>
-    <div class="collapse navbar-collapse">
-        <ul class="navbar-nav">
-            <li class="nav-item">
                 <a class="nav-link" href="loan.jsp">Loan Offers</a>
-            </li>
-        </ul>
-    </div>
-    <div class="collapse navbar-collapse">
-        <ul class="navbar-nav">
-            <li class="nav-item">
-                <a class="nav-link" href="withdraw.jsp">Withdraw Money</a>
-            </li>
-        </ul>
-    </div>
-    <div class="collapse navbar-collapse">
-        <ul class="navbar-nav">
-            <li class="nav-item">
-                <a class="nav-link" href="customerProfile.jsp">Customer Profile</a>
             </li>
         </ul>
     </div>
     <div id="right">
         <ul class="navbar-nav log_cursor">
             <li class="nav-item ">
-                <a class="nav-link"  style="cursor: pointer;"><%=user1.getUserName()%></a>
+                <a class="nav-link" href="customerProfile.jsp" style="cursor: pointer;">Welcome <%=user1.getUserName()%></a>
             </li>
             <li class="nav-item">
                 <a class="nav-link log_cursor" href="LogoutServlet">Log out</a>
@@ -65,50 +44,20 @@
     <div class="collapse navbar-collapse">
         <ul class="navbar-nav">
             <li class="nav-item">
-                <a class="nav-link" href="deposit.jsp">Deposit Funds</a>
+                <a class="nav-link" href="adminPortal.jsp">Admin Portal</a>
             </li>
         </ul>
     </div>
-    <div class="collapse navbar-collapse">
-        <ul class="navbar-nav">
-            <li class="nav-item">
-                <a class="nav-link" href="loan.jsp">Loan Offers</a>
-            </li>
-        </ul>
-    </div>
-    <div class="collapse navbar-collapse">
-        <ul class="navbar-nav">
-            <li class="nav-item">
-                <a class="nav-link" href="withdraw.jsp">Withdraw Money</a>
-            </li>
-        </ul>
-    </div>
-    <div class="collapse navbar-collapse">
-        <ul class="navbar-nav">
-            <li class="nav-item">
-                <a class="nav-link" href="customerProfile.jsp">Customer Profile</a>
-            </li>
-        </ul>
-    </div>
-    <div class="collapse navbar-collapse">
-        <ul class="navbar-nav">
-            <li class="nav-item">
-                <a class="nav-link" href="CreateAccount.jsp">Create Account</a>
-            </li>
-        </ul>
-    </div>
-
     <div id="right">
         <ul class="navbar-nav log_cursor">
             <li class="nav-item ">
-                <a class="nav-link"  style="cursor: pointer;"><%=user1.getUserName()%></a>
+                <a class="nav-link" href="adminPortal.jsp" style="cursor: pointer;">Welcome Admin</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link log_cursor" href="LogoutServlet">Log out</a>
             </li>
         </ul>
     </div>
-
     <%
         }
     %>
