@@ -50,10 +50,13 @@ else{
                             <%--@declare id="exampleinputemail1"--%><label for="exampleInputEmail1">Your Account Number is: <%=user.getAccountNo()%></label>
                         </div>
                         <div class="form-group">
-                            <%--@declare id="exampleinputpassword1"--%><label for="exampleInputPassword1">In Your RD the Deposited Amount is: <%=fdAccount.getDepositAmount()%></label>
+                            <%--@declare id="exampleinputpassword1"--%><label for="exampleInputPassword1">In Your FD the Deposited Amount is: <%=fdAccount.getDepositAmount()%></label>
                         </div>
                         <div class="form-group">
-                            <%--@declare id="exampleinputpassword1"--%><label for="exampleInputPassword1">In Your Rd the Maturity Amount is: <%=fdAccount.getMaturityAmount()%></label>
+                            <%--@declare id="exampleinputpassword1"--%><label for="exampleInputPassword1">In Your FD the Maturity Amount is: <%=fdAccount.getMaturityAmount()%></label>
+                        </div>
+                        <div class="form-group">
+                            <%--@declare id="exampleinputpassword1"--%><label for="exampleInputPassword1">In Your FD the Maturity Date is: <%=fdAccount.getMaturityDate()%></label>
                         </div>
                         <div style="margin-bottom: 15px">
                             <p class="text-center d-block mb-2">If closing before maturity then 1% charge will be levied</p>

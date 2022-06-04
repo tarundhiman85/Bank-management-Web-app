@@ -13,6 +13,7 @@ public class Transact {
     private String pAccountNumber;
     private Date Time;
     private String Amount;
+    private String Status;
     @ManyToOne(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
     @JoinColumn(name = "user_id")
     private Users user;
@@ -22,6 +23,14 @@ public class Transact {
         Time = new Date();
         //create a 10 digit random number
         referenceNo = String.format("%010d", (int)(Math.random()*10000000000L));
+    }
+
+    public String getStatus() {
+        return Status;
+    }
+
+    public void setStatus(String status) {
+        Status = status;
     }
 
     public int gettId() {

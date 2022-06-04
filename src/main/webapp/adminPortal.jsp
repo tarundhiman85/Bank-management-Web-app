@@ -64,7 +64,7 @@
 
 
         <div class="col-sm">
-            <a href="editProfile.jsp">
+            <a href="editProfile.jsp?user_id=<%=user1.getUserId()%>">
                 <div class="Payee-box">
                     <i class="fa-solid fa-user-pen" style="font-size:50px"></i><br>
                     <label>Edit Profile</label>

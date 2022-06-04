@@ -1,4 +1,7 @@
-
+<%@ page import="com.project.entities.Payee" %>
+<%@ page import="java.util.List" %>
+<%@ page import="com.project.dao.UserDao" %>
+<%@ page import="com.project.helper.FactoryProvider" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
@@ -9,16 +12,23 @@
 <%@include file="navbar.jsp"%>
 <%
     Users user = (Users) session.getAttribute("current-User");
+    List<Payee> payeeList = new UserDao(FactoryProvider.getFactory()).getPayeeList(user.getUserId());
     if(user==null){
 %>
 <div class="card1">
     <h2>You need to Sign in</h2>
     <a href="login.jsp">Click Here</a>
 </div>
+<%} else if(payeeList.size()==0){
+    %>
+<div class="card1">
+    <h2>You need to add Payee</h2>
+    <a href="AddPayee.jsp">Click Here</a>
+</div>
 <%
-}
+    }
 else{
-%>
+    %>
 <div class="container-fluid">
     <div class="row al">
         <div class="col-md-4">
@@ -33,37 +43,32 @@ else{
 
                         <div class="form-group">
                             <label>Your Account Number is <%=user.getAccountNo()%></label>
-<%--                            <input name="Account_Number" type="text" style="border:1px solid #72d3f1;" class="form-control" id="Account_Number" aria-describedby="emailHelp" placeholder="Enter receiver's account number">--%>
                         </div>
 
                         <div class="form-group">
 
                             <label>Your Account Type is <%=user.getAccountType().toUpperCase()%></label>
-<%--                            <label for="account_type"></label>--%>
-<%--                            <select name="account_type" id="account_type" required class="form-control">--%>
-<%--                                <option value="saving">Saving</option>--%>
-<%--                                <option value="current">Current</option>--%>
-<%--                            </select>--%>
                         </div>
 
                         <div class="form-group">
                             <label>Your Branch Name is <%=user.getBranchName().toUpperCase()%></label>
-<%--                            <label for="branch"></label>--%>
-<%--                            <select name="branch" id="branch" required class="form-control">--%>
-<%--                                <option value="Ahmadabad">Ahmadabad</option>--%>
-<%--                                <option value="Bangalore">Bangalore</option>--%>
-<%--                                <option value="Chandigarh">Chandigarh</option>--%>
-<%--                                <option value="Haryana">Haryana</option>--%>
-<%--                                <option value="Pune">Pune</option>--%>
-<%--                                <option value="Mumbai">Mumbai</option>--%>
-<%--                             </select>--%>
                         </div>
-
+<%--                        Select a payee from payee list by some option and then transfer funds--%>
                         <div class="form-group">
-                            <label for="PAccount_Number">Payee Account Number</label>
-                            <input name="PAccount_Number" type="text" style="border:1px solid #72d3f1;" class="form-control" id="PAccount_Number" aria-describedby="emailHelp" placeholder="Enter receiver's account number">
+                            <label>Select a Payee</label>
+                            <label>
+                                <select name="payeeData" class="form-control">
+                                    <option value="">Select a Payee</option>
+                                    <%
+                                    for(Payee payee:payeeList){
+                                    %>
+                                    <option value="<%=payee.getpID()%>"> <%=payee.getpName()%></option>
+                                    <%
+                                    }
+                                    %>
+                                </select>
+                            </label>
                         </div>
-
 
                         <div class="form-group">
                             <label for="amount">Amount</label>

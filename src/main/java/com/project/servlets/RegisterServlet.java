@@ -114,9 +114,7 @@ public class RegisterServlet extends HttpServlet {
 
                     //Creating UserCredentials Page
                     UserCredentials userCredentials  = new UserCredentials();
-                    userCredentials.setUserID(user.getUserId());
-                    if(user.getRoleId()==2) userCredentials.setUserType("Customer");
-                    else userCredentials.setUserType("Admin");
+
                     userCredentials.setLoginStatus(user.getLoginStatus());
                     userCredentials.setPassword(user.getUserPassword());
                     userCredentials.setUser(user);
@@ -124,9 +122,11 @@ public class RegisterServlet extends HttpServlet {
                     Session session = FactoryProvider.getFactory().openSession();
                     Transaction transaction = session.beginTransaction();
                     transaction.commit();
-                    session.save(userCredentials);
                     session.save(branchDetails);
                     int userId= (int)session.save(user);
+                    if(user.getRoleId()==2) userCredentials.setUserType("Customer");
+                    else userCredentials.setUserType("Admin");
+                    session.save(userCredentials);
                     session.close();
                     httpSession.setAttribute("current-user",user);
                     httpSession.setAttribute("message", "User Created Successfully");

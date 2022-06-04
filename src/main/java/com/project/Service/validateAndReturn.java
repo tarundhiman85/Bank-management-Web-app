@@ -38,7 +38,7 @@ public class validateAndReturn {
             query.setParameter("userName", userName);
             user = (Users) query.uniqueResult();
             session.close();
-            if(Integer.parseInt(user.getBalance())<Integer.parseInt(balance))  {
+            if(Double.parseDouble(user.getBalance())<Double.parseDouble(balance))  {
                 return false;
             }
         }
@@ -48,10 +48,10 @@ public class validateAndReturn {
         return true;
     }
     public String transferMoney(String amount, Users user, String accountNo){
-        int currentUserBalance = Integer.parseInt(user.getBalance());
-        int transferUserBalance = Integer.parseInt(amount);
-        int newUserBalance = currentUserBalance - transferUserBalance;
-        String newBalance = Integer.toString(newUserBalance);
+        double currentUserBalance = Double.parseDouble(user.getBalance());
+        double transferUserBalance = Double.parseDouble(amount);
+        double newUserBalance = currentUserBalance - transferUserBalance;
+        String newBalance = Double.toString(newUserBalance);
 
         try {
             //deducting the balance from current user
@@ -69,9 +69,9 @@ public class validateAndReturn {
             if(user1==null){
                 return "User not found";
             }
-            int currentUser1Balance = Integer.parseInt(user1.getBalance());
-            int newUser1Balance = currentUser1Balance + transferUserBalance;
-            String newBalance1 = Integer.toString(newUser1Balance);
+            double currentUser1Balance = Double.parseDouble(user1.getBalance());
+            double newUser1Balance = currentUser1Balance + transferUserBalance;
+            String newBalance1 = Double.toString(newUser1Balance);
 
             transaction=session.beginTransaction();
             user1.setBalance(newBalance1);

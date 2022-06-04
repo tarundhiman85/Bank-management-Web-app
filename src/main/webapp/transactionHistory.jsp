@@ -46,6 +46,7 @@
                             <th>PAccount Number</th>
                             <th>Date Time</th>
                             <th>Amount</th>
+                            <th>Status</th>
                         </tr>
                         </thead>
                         <tbody>
@@ -57,6 +58,7 @@
                             <td><%=transact.getpAccountNumber()%></td>
                             <td><%=transact.getTime()%></td>
                             <td><%=transact.getAmount()%></td>
+                            <td><%=transact.getStatus()%></td>
                         </tr>
                         <%
                          }

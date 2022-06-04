@@ -57,9 +57,6 @@ else{
             <div class="form-group">
               <%--@declare id="exampleinputpassword1"--%><label for="exampleInputPassword1">In Your Rd the Maturity Amount is: <%=rdAccount.getMaturityAmount()%></label>
             </div>
-            <div style="margin-bottom: 15px">
-              <p class="text-center d-block mb-2">If closing before maturity then 1% charge will be levied</p>
-            </div>
             <input type="hidden" name="close" value="rd">
             <div class="container text-center">
               <button type="submit" id="register">Click to Close RD</button>

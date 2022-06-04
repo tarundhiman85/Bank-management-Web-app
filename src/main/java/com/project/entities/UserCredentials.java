@@ -8,7 +8,7 @@ public class UserCredentials {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
     private String UserType;
-    private int UserID;
+
     private String Password;
     private String LoginStatus;
     @ManyToOne(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
@@ -26,9 +26,9 @@ public class UserCredentials {
         this.user = user;
     }
 
-    public UserCredentials(String userType, int userID, String password, String loginStatus) {
+    public UserCredentials(String userType,  String password, String loginStatus) {
         UserType = userType;
-        UserID = userID;
+
         Password = password;
         LoginStatus = loginStatus;
     }
@@ -49,13 +49,6 @@ public class UserCredentials {
         UserType = userType;
     }
 
-    public int getUserID() {
-        return UserID;
-    }
-
-    public void setUserID(int userID) {
-        UserID = userID;
-    }
 
     public String getPassword() {
         return Password;

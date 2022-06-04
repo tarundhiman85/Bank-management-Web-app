@@ -12,6 +12,7 @@
     <title>Account Summary</title>
     <%@include file="/common_css_js.jsp"%>
 </head>
+
 <body class="back">
 <%@include file="navbar.jsp"%>
 <%

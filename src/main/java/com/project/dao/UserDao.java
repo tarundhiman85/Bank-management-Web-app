@@ -229,9 +229,9 @@ public class UserDao {
             updateUser(user);
         }
     }
-    private void increaseBalancefd(Users users, String depositAmount, FDAccount fd) {
-        //first check on the fd the deposit amount is greater then or equal to maturity amount
-        if(Double.parseDouble(depositAmount) >= Double.parseDouble(fd.getMaturityAmount())){
+    private void increaseBalancefd(Users users, String maturityAmount, FDAccount fd) {
+        //check if the maturity date is greater then or equal to today date
+        if(fd.getMaturityDate().compareTo(String.valueOf(new Date())) < 0){
             //just simply add the maturity amount to the opening balance of the user
             users.setBalance(String.valueOf(Double.parseDouble(users.getBalance()) + Double.parseDouble(fd.getMaturityAmount())));
             //call the update user method to update the user
@@ -239,7 +239,7 @@ public class UserDao {
         }
         else{
             //if the deposit amount is less then the maturity amount then decrease one percent of the deposit amount from fd account and add it to the user
-            users.setBalance(String.valueOf(Double.parseDouble(users.getBalance()) + (Double.parseDouble(depositAmount) - (Double.parseDouble(depositAmount) * 0.01))));
+            users.setBalance(String.valueOf(Double.parseDouble(users.getBalance()) + (Double.parseDouble(maturityAmount) - (Double.parseDouble(maturityAmount) * 0.01))));
             //call the update user method to update the user
             updateUser(users);
         }
