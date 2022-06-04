@@ -17,7 +17,7 @@ To do so, the user has to create a unique user name and password for securely lo
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Online Bank Management</title>
+    <title>Online Banking System</title>
     <%@include file="/common_css_js.jsp"%>
 </head>
 <body class="back">
@@ -25,9 +25,10 @@ To do so, the user has to create a unique user name and password for securely lo
 
 <div class="div-block">
     <div class="text-block">
-        Welcome to the ABC Bank<br>
-        Check your Account Details <br>
+        Welcome to the XYZ Bank<br>
+        Check your Account Details<br>
         Check Your Loan Offers<br>
+        Withdraw Money<br>
     </div>
 </div>
 

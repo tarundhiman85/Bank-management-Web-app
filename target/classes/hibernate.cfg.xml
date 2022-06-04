@@ -4,6 +4,10 @@
         "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
 <hibernate-configuration>
     <session-factory>
+<!--        <property name="connection.driver_class">com.mysql.jdbc.Driver</property>-->
+<!--        <property name="connection.url">jdbc:mysql://127.0.0.1:50426/localdb</property>-->
+<!--        <property name="connection.username">azure</property>-->
+<!--        <property name="connection.password">6#vWHD_$</property>-->
         <property name="connection.driver_class">com.mysql.jdbc.Driver</property>
         <property name="connection.url">jdbc:mysql://localhost:3306/mybank</property>
         <property name="connection.username">root</property>
@@ -13,5 +17,11 @@
         <property name="show_sql">true</property>
         <property name="format_sql">true</property>
         <mapping class="com.project.entities.Users"/>
+        <mapping class="com.project.entities.Transact"/>
+        <mapping class="com.project.entities.BranchDetails"/>
+        <mapping class="com.project.entities.UserCredentials"/>
+        <mapping class="com.project.entities.FDAccount"/>
+        <mapping class="com.project.entities.RDAccount"/>
+        <mapping class="com.project.entities.Payee"/>
     </session-factory>
 </hibernate-configuration>

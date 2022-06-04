@@ -18,16 +18,16 @@
 <%@include file="navbar.jsp"%>
 <div class="container-fluid">
     <div class="row al">
-        <div class="col-md-4">
+
             <div class="card mt-3">
-                <div class="card-body">
+                <div class="card-body" style="max-width: 95%; margin: auto">
                     <%@include file="message.jsp"%>
                     <%--                    by jsp get list of payee--%>
                     <%Users user = (Users) session.getAttribute("current-User");
                         List<Users> users = new UserDao(FactoryProvider.getFactory()).getAllUsers();
                     %>
 
-                    <table class="table table-striped table-bordered" style="color:#72d3f1">
+                    <table class="table table-striped table-bordered" style="color:#72d3f1; margin: auto; max-width: 90% ">
                         <thead>
                         <tr>
                             <th>User Id</th>
@@ -67,8 +67,8 @@
                     </table>
                 </div>
             </div>
+
         </div>
-    </div>
 </div>
 </body>
 </html>

@@ -24,30 +24,32 @@
 <%
 }
 else{
-    int balance=Integer.parseInt(user.getBalance());
+//    int balance=Integer.parseInt(user.getBalance());
+    double balance1=Double.parseDouble(user.getBalance());
+    int balance= (int) balance1;
     if(balance>50){
         if(balance<100){
 %>
 <div class="card1">
-    <h2>Available Bank Offer is: Rs <%=String.valueOf(Integer.parseInt(user.getBalance())*(2))%>/- at
-        <%=String.valueOf(((Integer.parseInt(user.getBalance())*(2))/100)*10)%> Rs/year at 10%</h2>
+    <h2>Available Bank Offer is: Rs <%=String.valueOf(balance*(2))%>/- at
+        <%=String.valueOf(((balance*(2))/100)*10)%>(10%) Interest</h2>
 </div>
 <%} else if(balance<500){
 %>
 <div class="card1">
-    <h2>Available Bank Offer is: Rs <%=String.valueOf(Integer.parseInt(user.getBalance())*(2))%>/- at
-        <%=String.valueOf(((Integer.parseInt(user.getBalance())*(2))/100)*10)%> Rs/year at 10%</h2>
+    <h2>Available Bank Offer is: Rs <%=String.valueOf(balance*(2))%>/- at
+        <%=String.valueOf(((balance*(2))/100)*10)%>(10%) Interest</h2>
 </div>
 <%} else{
 %>
 <div class="card1">
-    <h2>Available Bank Offer is: Rs <%=String.valueOf(Integer.parseInt(user.getBalance())*(2))%>/- at
-        <%=String.valueOf(((Integer.parseInt(user.getBalance())*(2))/100)*10)%> Rs/year at 10%</h2>
+    <h2>Available Bank Offer is: Rs <%=String.valueOf(balance*(2))%>/- at
+        <%=String.valueOf(((balance*(2))/100)*10)%>(10%) Interest</h2>
 </div>
 <%}} else{
 %>
 <div class="card1">
-    <h2>You dont have any Offer</h2>
+    <h2>You don't have any Offer</h2>
 </div>
 <%}%>
 <%}%>
