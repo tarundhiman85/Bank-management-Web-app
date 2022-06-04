@@ -29,15 +29,15 @@
 %>
 <div class="container-fluid">
     <div class="row al">
-        <div class="col-md-6">
+
             <div class="card mt-3">
-                <div class="card-body">
+                <div class="card-body" style="max-width: 95%; margin: auto">
                     <%@include file="message.jsp"%>
                     <%
                         List<Transact> transactList = new UserDao(FactoryProvider.getFactory()).getTransactionHistoryList(user.getUserId());
                     %>
 
-                    <table class="table table-striped table-bordered" style="color:#72d3f1">
+                    <table class="table table-striped table-bordered" style="color:#72d3f1; margin: auto; max-width: 90%  ">
                         <thead>
                         <tr>
                             <th>Transaction ID</th>
@@ -58,7 +58,7 @@
                             <td><%=transact.getpAccountNumber()%></td>
                             <td><%=transact.getTime()%></td>
                             <td><%=transact.getAmount()%></td>
-                            <td><%=transact.getStatus()%></td>
+                            <td> lorem epsum lorem epsumlorem epsumlorem epsumlorem epsumlorem epsumlorem epsumlorem epsumlorem epsumlorem epsumlorem epsumlorem epsumlorem epsumlorem epsumlorem epsumlorem epsumlorem epsumlorem epsumlorem epsumlorem epsumlorem epsumlorem epsumlorem epsumlorem epsumlorem epsumlorem epsumlorem epsumlorem epsumlorem epsumlorem epsumlorem epsumlorem epsumlorem epsumlorem epsumlorem epsumlorem epsumlorem epsumlorem epsumlorem epsum</td>
                         </tr>
                         <%
                          }
@@ -66,7 +66,7 @@
                         </tbody></table>
                 </div>
             </div>
-        </div>
+
     </div>
 </div>
 <%
