@@ -291,4 +291,121 @@ public class UserDao {
         if (qu.uniqueResult() == null) return true;
         return false;
     }
+
+    public boolean decreaseUserBalance(Users user, Double amount) {
+        try {
+            Session session = this.factory.openSession();
+            session.beginTransaction();
+            String s = String.valueOf(Double.parseDouble(user.getBalance()) - amount);
+            //get the double upto 2 decimal places
+            user.setBalance(String.format("%.2f", Double.parseDouble(s)));
+            session.update(user);
+            session.update(user);
+            session.getTransaction().commit();
+            session.close();
+            return true;
+        } catch (Exception e) {
+            e.printStackTrace();
+            return false;
+        }
+    }
+
+    public List<Stocks> getStockList(Users user) {
+          List<Stocks> stockList = new ArrayList<>();
+        try {
+            Session session = this.factory.openSession();
+            session.beginTransaction();
+            stockList = session.createQuery("from Stocks where user.userId = :userId").setParameter("userId", user.getUserId()).list();
+            session.getTransaction().commit();
+            session.close();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return stockList;
+    }
+
+    public boolean increaseUserBalance(Users user, Double amount2) {
+        try {
+            Session session = this.factory.openSession();
+            session.beginTransaction();
+             String s = String.valueOf(Double.parseDouble(user.getBalance()) + amount2);
+             //get the double upto 2 decimal places
+            user.setBalance(String.format("%.2f", Double.parseDouble(s)));
+            session.update(user);
+            session.getTransaction().commit();
+            session.close();
+            return true;
+        } catch (Exception e) {
+            e.printStackTrace();
+            return false;
+        }
+    }
+
+    public Stocks getStockById(String stockId) {
+        Stocks stock = null;
+        try {
+            int id = Integer.parseInt(stockId);
+            Session session = this.factory.openSession();
+            session.beginTransaction();
+            stock = session.get(Stocks.class, id);
+            session.getTransaction().commit();
+            session.close();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return stock;
+    }
+
+    public void updateProfitLoss(Users user, String profit, String loss) {
+        try {
+            //first check if profitLoss object exists for a user
+            //get profitLoss object by userId
+            profitLoss profitLoss = getProfitLossByUserId(user.getUserId());
+            if (profitLoss == null) {
+                //create new profitLoss object
+                profitLoss = new profitLoss();
+                profitLoss.setUser(user);
+                profitLoss.setProfit(profit);
+                profitLoss.setLoss(loss);
+                Session session = this.factory.openSession();
+                session.beginTransaction();
+                session.save(profitLoss);
+                session.getTransaction().commit();
+                session.close();
+            }
+            else {
+                //update profitLoss object
+                Session session = this.factory.openSession();
+                session.beginTransaction();
+                //add the previous profit and loss to the new profit and loss
+                profitLoss.setProfit(String.valueOf(Double.parseDouble(profitLoss.getProfit()) + Double.parseDouble(profit)));
+                profitLoss.setLoss(String.valueOf(Double.parseDouble(profitLoss.getLoss()) + Double.parseDouble(loss)));
+                session.update(profitLoss);
+                session.getTransaction().commit();
+                session.close();
+
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    public profitLoss getProfitLossByUserId(int userId) {
+        profitLoss profitLoss = null;
+        try {
+            Session session = this.factory.openSession();
+            session.beginTransaction();
+            String q = "from profitLoss where user.userId=:i";
+            Query query = (Query) session.createQuery(q);
+            query.setParameter("i", userId);
+            profitLoss = (profitLoss) query.uniqueResult();
+            session.getTransaction().commit();
+            session.close();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return profitLoss;
+    }
+
+
 }
