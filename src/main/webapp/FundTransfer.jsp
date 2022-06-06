@@ -57,7 +57,7 @@ else{
                         <div class="form-group">
                             <label>Select a Payee</label>
                             <label>
-                                <select name="payeeData" class="form-control">
+                                <select name="payeeData" class="form-control"  required style="background-color: #041d30; color: #72d3f1">
                                     <option value="">Select a Payee</option>
                                     <%
                                     for(Payee payee:payeeList){

@@ -49,7 +49,16 @@
                 </div>
             </a>
         </div>
+        <div class="col-sm">
+            <a href="market.jsp">
+                <div class="Payee-box">
+                    <i class="fa-solid fa-store" style="font-size:50px"></i><br>
+                    <label>Stock Market</label>
+                </div>
+            </a>
+        </div>
         <div class="w-100"></div>
+
         <div class="col-sm">
             <a href="account.jsp">
                 <div class="Payee-box">
@@ -83,7 +92,14 @@
             </a>
         </div>
         <div class="w-100"></div>
-
+        <div class="col-sm">
+            <a href="recharge.jsp">
+                <div class="Payee-box">
+                    <i class="fa-solid fa-battery-full" style="font-size:50px"></i><br>
+                    <label>Recharge</label>
+                </div>
+            </a>
+        </div>
         <div class="col-sm">
             <a href="withdraw.jsp">
                 <div class="Payee-box">
@@ -108,6 +124,7 @@
                 </div>
             </a>
         </div>
+
 
     </div>
 </div>

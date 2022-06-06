@@ -50,15 +50,19 @@
                         </tr>
                         </thead>
                         <tbody>
-                        <% for(Transact transact:transactList){ %>
+
+                        <%
+                            //iterate list from last to first
+                            for(int i=transactList.size()-1; i>=0; i--){
+                                %>
                         <tr>
-                            <td><%=transact.gettId()%></td>
-                            <td><%=transact.getReferenceNo()%></td>
-                            <td><%=transact.getTransactionType()%></td>
-                            <td><%=transact.getpAccountNumber()%></td>
-                            <td><%=transact.getTime()%></td>
-                            <td><%=transact.getAmount()%></td>
-                            <td> lorem epsum lorem epsumlorem epsumlorem epsumlorem epsumlorem epsumlorem epsumlorem epsumlorem epsumlorem epsumlorem epsumlorem epsumlorem epsumlorem epsumlorem epsumlorem epsumlorem epsumlorem epsumlorem epsumlorem epsumlorem epsumlorem epsumlorem epsumlorem epsumlorem epsumlorem epsumlorem epsumlorem epsumlorem epsumlorem epsumlorem epsumlorem epsumlorem epsumlorem epsumlorem epsumlorem epsumlorem epsumlorem epsumlorem epsum</td>
+                            <td><%=transactList.get(i).gettId()%></td>
+                            <td><%=transactList.get(i).getReferenceNo()%></td>
+                            <td><%=transactList.get(i).getTransactionType()%></td>
+                            <td><%=transactList.get(i).getpAccountNumber()%></td>
+                            <td><%=transactList.get(i).getTime()%></td>
+                            <td><%=transactList.get(i).getAmount()%></td>
+                            <td><%=transactList.get(i).getStatus()%></td>
                         </tr>
                         <%
                          }

@@ -54,6 +54,14 @@
                 </div>
         </div>
         <div class="col-sm">
+            <a href="market.jsp">
+                <div class="Payee-box">
+                    <i class="fa-solid fa-store" style="font-size:50px"></i><br>
+                    <label>Stock Market</label>
+                </div>
+            </a>
+        </div>
+        <div class="col-sm">
             <a href="CreateAccount.jsp">
                 <div class="Payee-box">
                     <i class="fa-solid fa-user-plus" style="font-size:50px"></i><br>
@@ -61,8 +69,6 @@
                 </div>
             </a>
         </div>
-
-
         <div class="col-sm">
             <a href="editProfile.jsp?user_id=<%=user1.getUserId()%>">
                 <div class="Payee-box">
@@ -72,6 +78,14 @@
             </a>
         </div>
         <div class="w-100"></div>
+        <div class="col-sm">
+            <a href="recharge.jsp">
+                <div class="Payee-box">
+                    <i class="fa-solid fa-battery-full" style="font-size:50px"></i><br>
+                    <label>Recharge</label>
+                </div>
+            </a>
+        </div>
         <div class="col-sm">
             <a href="account.jsp">
                 <div class="Payee-box">
