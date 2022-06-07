@@ -36,8 +36,15 @@
    %>
 
 <%--how to fetch the current user on the login page  Session tracking--%>
-<div class="card1">
-<%--    <img src="img.jpg" alt="John" style="width:100%">--%>
+<div class="container-center">
+    <h3  style="text-align: center; color: #72d3f1; padding-top: 5%">
+        View Account
+    </h3>
+    <div class="row al">
+
+        <div class="card mt-3" style="color:#72d3f1; margin: auto; max-width: 250%; background-color: #001e30">
+
+
     <h6>Name: <%=user.getUserName()%></h6>
     <h6>Address: <%=user.getUserAddress()%></h6>
     <h6>Account Type: <%=user.getAccountType().toUpperCase()%></h6>
@@ -45,9 +52,9 @@
     <h6>Date of Birth :<%=user.getDob()%></h6>
     <h6>Email: <%=user.getUserEmail()%></h6>
     <h6>Phone: <%=user.getMobilePhone()%></h6>
-    <a href="deposit.jsp"><button id="deposit1">Add Balance</button></a>
 </div>
-
+        </div>
+    </div>
     <br> <%
     }
     %>

@@ -53,6 +53,9 @@ else{
                         <div class="form-group">
                             <label>Your Branch Name is <%=user.getBranchName().toUpperCase()%></label>
                         </div>
+                        <div class="form-group">
+                            <label>Your Balance is <%=user.getBalance()%></label>
+                        </div>
 <%--                        Select a payee from payee list by some option and then transfer funds--%>
                         <div class="form-group">
                             <label>Select a Payee</label>

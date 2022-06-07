@@ -17,6 +17,9 @@
 <body class="back">
 <%@include file="navbar.jsp"%>
 <div class="container-fluid">
+    <h3  style="text-align: center; color: #72d3f1; padding-top: 5%">
+        View Stocks
+    </h3>
     <div class="row al">
         <div class="col-md-4">
             <div class="card mt-3">

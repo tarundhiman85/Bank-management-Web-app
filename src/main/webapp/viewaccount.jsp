@@ -8,12 +8,13 @@
 <body class="back">
 <%@include file="navbar.jsp"%>
 <div class="container-fluid">
+    <h3  style="text-align: center; color: #72d3f1; padding-top: 5%">
+        View Account
+    </h3>
   <div class="row mt-5">
     <div class="col-md-4 offset-md-4">
       <div class="card">
         <div class="card-body px-5">
-          <h4 class="text-center my-3">View Account</h4>
-<%--          <form action="RegisterServlet" method="post">--%>
 
             <div class="form-group">
               <label for="name">User Full Name </label>

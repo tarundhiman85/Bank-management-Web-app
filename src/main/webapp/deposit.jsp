@@ -19,7 +19,9 @@
 }
 else{
 %>
+
 <div class="card2">
+
 <form id="f1" action="DepositServlet" method="post">
         <h5 style="color: #72d3f1">Enter the amount to add</h5>
         <input name="balance" id="b1" required type="text" placeholder="Enter Amount">

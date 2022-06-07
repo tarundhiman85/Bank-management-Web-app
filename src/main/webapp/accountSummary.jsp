@@ -29,16 +29,20 @@
 <div class="container-fluid">
     <div class="row al">
         <div class="col-md-4">
-            <div class="card mt-3">
-                <div class="card-body">
+            <h4 style="color: #72d3f1">Account Summary</h4>
                     <%@include file="message.jsp"%>
-                    <table class="table table-striped table-bordered" style="color:#72d3f1">
+                    <table class="table table-striped table-bordered" style="color:#72d3f1; margin: auto; background-color: #001e30 ">
                         <thead>
                         <tr>
                             <th>Account Number</th>
                             <th>Account Type</th>
                             <th>Balance</th>
                             <th>Date of Birth</th>
+                            <th>Balance</th>
+                            <th>Branch Name</th>
+                            <th>IFSC Code</th>
+                            <th>Card Number</th>
+                            <th>Customer Id</th>
                         </tr>
                         </thead>
                         <tbody>
@@ -47,13 +51,17 @@
                             <td><%=user.getAccountType().toUpperCase()%></td>
                             <td><%=user.getBalance()%></td>
                             <td><%=user.getDob()%></td>
+                            <td><%=user.getBalance()%></td>
+                            <td><%=user.getBranchName()%></td>
+                            <td><%=user.getIfscCode()%></td>
+                            <td><%=user.getCardNumber()%></td>
+                            <td><%=user.getCustomerId()%></td>
                         </tr>
                         </tbody></table>
                 </div>
             </div>
         </div>
-    </div>
-</div>
+
 <%
 }
 %>

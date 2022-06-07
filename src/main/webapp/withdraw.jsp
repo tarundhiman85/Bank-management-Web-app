@@ -22,7 +22,11 @@
 }
 else{
 %>
+
 <div class="card1">
+    <h5  style="text-align: center; color: #72d3f1;">
+        Withdraw Money
+    </h5>
     <%@include file="message.jsp"%>
     <form action="WithdrawServlet" method="post">
     <h6>Available Balance: <%=user.getBalance()%></h6>

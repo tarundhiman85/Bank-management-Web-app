@@ -20,6 +20,9 @@
     <div class="row al">
         <div class="col-md-4">
             <div class="card mt-3">
+                <div class="container-center">
+                    <h4 style="color: #72d3f1">View Payee</h4>
+                </div>
                 <div class="card-body">
                     <%@include file="message.jsp"%>
                     <%--                    by jsp get list of payee--%>

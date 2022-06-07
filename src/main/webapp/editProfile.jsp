@@ -28,7 +28,7 @@
                 <div class="card-body px-5">
                     <%@include file="message.jsp"%>
                     <%@include file="errorMsg.jsp"%>
-                    <h4 class="text-center my-3">Create Account</h4>
+                    <h4 class="text-center my-3">Edit Profile</h4>
                     <form action="UpdateUserServlet" method="post">
                         <div>
                             <label>Email</label>

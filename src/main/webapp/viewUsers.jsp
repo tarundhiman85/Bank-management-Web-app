@@ -17,8 +17,10 @@
 <body class="back">
 <%@include file="navbar.jsp"%>
 <div class="container-fluid">
+    <h3  style="text-align: center; color: #72d3f1; padding-top: 5%">
+        View Users
+    </h3>
     <div class="row al">
-
             <div class="card mt-3">
                 <div class="card-body" style="max-width: 95%; margin: auto">
                     <%@include file="message.jsp"%>
