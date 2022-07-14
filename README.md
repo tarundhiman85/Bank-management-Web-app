@@ -5,6 +5,10 @@ This is a Web app developed in Java using technologies like Servelt, Jsp, Hibern
 - Withdraw money form database. 
 - Add money to his account. 
 - Check the available balance from the database. 
+- Add and Buy Stocks with Current Profit and Loss Indicator.
+- Mobile Recharge.
+- Can Create FD and RD.
+- Can Pay RD Monthly.
 
 ## Screesnshots
 ### Home page
